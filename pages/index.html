@@ -1,0 +1,1148 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title><?php $DOMAIN;?></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>AMN аудит<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" class="active" href="/"><i class="bi bi-house-door-fill fa-10x"></i></a></li>
+
+          <li><a class="nav-link scrollto" href="index.html#services">Үйлчилгээ</a></li>
+          <li><a class="nav-link scrollto" href="index.html#pricing">Үнийн мэдээлэл</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Гэрээ байгуулах</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Үнийн санал авах</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">Бидний тухай</a></li>
+          <li class="dropdown megamenu"><a href="index.html#tab-1"><span>Ажилд авъя</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+
+            <ul>
+              <li>
+                <a href="#job1">Аудитор</a>
+                <a href="#job2">Нягтлан бодогч</a>
+                <a href="#job3">Аудиторын туслах</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav>
+
+      <a class="btn-getstarted scrollto" href="/sign-in">Нэвтрэх</a>
+
+    </div>
+  </header>
+  
+
+  <?php if ( !empty($_SESSION['success']) ): ?>
+  <div class="container">
+    <div class="alert alert-success" role="alert" style="margin-top: 80px;">
+            <h6><?php echo $_SESSION['success']; ?></h6>
+    </div>
+  </div>
+  <?php unset($_SESSION['success']); endif;?>
+
+  <?php if (!empty($_SESSION['errors'])): ?>
+  <div class="container">
+    <div class="alert alert-danger" role="alert" style="margin-top: 80px;">
+            <h6><?php echo $_SESSION['errors'] ?></h6>
+    </div>
+  </div>
+  <?php unset($_SESSION['errors']); endif;?>
+  <!-- Home -->
+  <section id="hero-fullscreen" class="hero-fullscreen d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center position-relative" data-aos="zoom-out">
+      <h2><span>Мэргэжлийн хамт олон</span></h2>
+      <h2 style="margin-bottom: 2rem;"><span>Чанартай үйлчилгээ</span></h2>
+      
+      <p style="text-align: center;">Бид аудит баталгаажуулалт, нягтлан бодох бүртгэлийн зөвлөх, тайлан гаргах, программ нэвтрүүлэлтийн үйлчилгээг мэргэжлийн өндөр түвшинд үзүүлж байна.</p>
+      <div class="d-flex">
+        <a href="#php-email-form" class="btn-get-started scrollto">Гэрээ байгуулах</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ======= Давуу тал ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-activity icon"></i></div>
+              <h4><a href="" class="stretched-link">Туршлагатай</a></h4>
+              <p>Бид энэ салбартаа мэргэжлийн бөгөөд тасралтгүй 8 жил үйл ажиллагаагаа явуулж байна.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
+              <h4><a href="" class="stretched-link">Хариуцлагатай</a></h4>
+              <p>Бид гэрээгээр хүлээсэн үүргийн хүрээнд амлалтаа бүрэн биелүүлж харилцагчдынхаа мэдээ мэдээллийн нууцыг чанд хадгалан ажилладаг.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
+              <h4><a href="" class="stretched-link">Уян хатан</a></h4>
+              <p>Хамтран ажиллах хүрээнд бүхий л зүйлд уян хатан ханддаг.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
+              <h4><a href="" class="stretched-link">Тогтвортой</a></h4>
+              <p>Олон жилийн турш таны үнэнч хамтрагч байна.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Давуу тал -->
+
+    <!-- ======= Тухай ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Бидний тухай</h2>
+          <p>“Эй Эм Эн аудит” ХХК нь <strong>2015</strong> онд байгуулагдсан. Аудитын үйл ажиллагаа эрхлэх <strong>тусгай зөвшөөрөлтэй</strong>, ММНБИ-ын <strong>гишүүн</strong> байгууллага юм.</p>
+        </div>
+
+        <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-5">
+            <div class="about-img">
+              <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <ul class="nav nav-pills mb-3">
+              <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Алсын хараа</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Чиглэл</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Бодлого</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab4">Хүний нөөц</a></li>
+            </ul>
+
+            <div class="tab-content">
+
+              <div class="tab-pane fade show active" id="tab1">
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Эрхэм зорилго</h4>
+                </div>
+                <p>Олон улсын стандартад нийцсэн мэргэжлийн чанартай үйлчилгээг үзүүлж, харилцагчдынхаа үнэ цэнийг нэмэгдүүлэн улсынхаа хөгжилд хувь нэмэр оруулах</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Алсын хараа</h4>
+                </div>
+                <p>Аудит, санхүүгийн зөвлөх үйлчилгээний Үндэсний тэргүүлэх компани болох</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Үнэт зүйлс</h4>
+                </div>
+                <ul>
+                  <li>Мэргэжлийн ёс зүйтэй, тасралтгүй хөгжсөн, чадварлаг мэргэшсэн баг хамт олон</li>
+                  <li>Мэргэжлийн өндөр түвшний чанартай үйлчилгээ</li>
+                  <li>Ёс зүйтэй, хуулиа дээдэлдэг харилцагчид</li>
+                  
+                </ul>
+
+              </div>
+
+              <div class="tab-pane fade show" id="tab2">
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Аудит баталгаажуулалтын үйлчилгээ</h4>
+                </div>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Нягтлан бодох бүртгэлийн зөвлөх үйлчилгээ</h4>
+                </div>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Санхүү, татварын тайлан гаргах үйлчилгээ</h4>
+                </div>
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Нягтлан бодох бүртгэлийн Dayansoft ERP программ нэвтрүүлэлтийн үйлчилгээ</h4>
+                </div>
+              </div>
+
+              <div class="tab-pane fade show" id="tab3">
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Аудитын олон улсын стандарт болон НББОУС, СТОУС-ын дагуу үйл ажиллагаа явуулдаг</h4>
+                </div>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Харилцагчийн мэдээллийн нууцыг хадгалж ажилладаг</h4>
+                </div>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Хараат бус байх , хараат бус байдлыг алдагдуулахад нөлөөлж болох шахалт, эрхшээлд орох аливаа нөхцөл байдлаас зайлсхийх зарчмыг баримталдаг</h4>
+                </div>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Аудитын гэрээт ажлыг гүйцэтгэхдээ зөвлөгөө, зөвлөмжийг өгч ажилладаг</h4>
+                </div>
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Үйлчлүүлэгчийнхээ үйл ажиллагааны онцлогт тохирсон НББ-ийн зөвлөгөө, үйлчилгээ үзүүлдэг</h4>
+                </div>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Үйлчлүүлэгчийнхээ НББ-ийг сайжруулах зорилгоор НББ-ийн программын нэвтрүүлэлтийг үйл ажиллагааны онцлогтой нь уялдуулан хүргэдэг</h4>
+                </div>
+
+                </div>
+
+              <div class="tab-pane fade show" id="tab4">
+
+                <p class="fst-italic">Манай компанид Монгол Улсын хугацаагүй эрхтэй мэргэшсэн нягтлан бодогч 4, эдийн засгийн ухааны магистр 3, татварын мэргэшсэн зөвлөх 1, Үүнд: </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Үндсэн аудитор - 4</h4>
+                </div>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Аудитын менежер - 1</h4>
+                </div>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Аудиторын туслах - 4</h4>
+                </div>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Нягтлан бодогч - 4</h4>
+                </div>
+
+                <p class="fst-italic" style="margin-top: 20px;"> тус тус ажиллаж байна.</p>
+              </div>
+
+              </div>
+            </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Тухай -->
+
+    <!-- ======= Хамтран ажиллагч ======= -->
+    <section id="clients" class="clients">
+      
+      <div class="section-header">
+        <h2>Хамтран ажиллагч байгууллагууд</h2>
+        <p>Итгэлтэй харилцагч байх нь бидний эрхэм зорилго</p>
+      </div>
+
+      <div class="container" data-aos="zoom-out">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            
+            <div class="swiper-slide"><a href="https://dayansoft.mn/" target="_blank"><img src="assets/img/clients/dayansoft.jpg" class="img-fluid" alt="dayansoft"></a></div>
+            <div class="swiper-slide"><img src="assets/img/clients/dome.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/jangsu.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/koraebul.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/tomntoms.jpg" class="img-fluid" alt=""></div>
+            
+            <!-- <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div> -->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Хамтран ажиллагч -->
+
+    <!-- ======= Нээлттэй ажлын байр ======= -->
+    <section id="features" class="features">
+      <div class="section-header">
+        <h2>Нээлттэй ажлын байр</h2>
+      </div>
+      <div class="container" data-aos="fade-up">
+
+        <ul class="nav nav-tabs row gy-4 d-flex">
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#job1">
+              <i class="bi bi-binoculars color-cyan"></i>
+              <h4>Аудитор</h4>
+            </a>
+          </li>
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#job2">
+              <i class="bi bi-brightness-high color-teal"></i>
+              <h4>Аудиторын туслах</h4>
+            </a>
+          </li>
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#job3">
+              <i class="bi bi-box-seam color-indigo"></i>
+              <h4>Нягтлан бодогч</h4>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="job1">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+                <h3>Аудитор таныг ажилд урьж байна</h3>
+                <p class="fst-italic" style="margin-top: 20px; color: black; font-weight: bold;">
+                  Гүйцэтгэх үүрэг
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Аудитын төлөвлөгөө, хөтөлбөрийн дагуу бүртгэлийн бичилтүүд, тайлан мэдээ, мэдээллийг баримт бүрдүүлэлттэй харьцуулж, хөрөнгө, өр төлбөр, өмчийг баталгаажуулах, үйлчлүүлэгчийн санхүүгийн тайлан нь холбогдох хууль, СТОУС-ын дагуу үнэн зөв, бодитой илэрхийлэгдсэн эсэхэд аудит хийнэ</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Аудитын шалгалт болон дүгнэлтийн дагуу баримт бүрдүүлэн, аудитын ажлын тайланг бэлтгэж урьдчилсан дүгнэлтийг танилцуулах, аудитаар орж байгаа этгээдтэй зөвшилцөх, үйл ажиллагааны мэдээлэл ба хандлагуудыг цуглуулж, шинжилж, нэгтгэн аудитын эцсийн тайланг бэлтгэх</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Одоо мөрдөгдөж байгаа болон шинээр гарч байгаа хууль тогтоомж, стандартыг судалж, шаардлагуудад нийцүүлж ажиллахыг шаардах; шаардлагатай үйл ажиллагаануудад удирдлагад зөвлөгөө өгөх</li>
+                  <li><i class="bi bi-check-circle-fill"></i>	Аудитын ажлын баримтыг бүрдүүлж үдэхэд бэлтгэн ахлах аудиторт хүлээлгэн өгөх</li>                  
+                  <li><i class="bi bi-check-circle-fill"></i>	Аудитын хөтөлбөр болон асуулгуудыг шинэчилж, удирдлагад шинэ бодлого журам санал болгох</li>
+                </ul>
+
+                <p class="fst-italic" style="margin-top: 20px; color: black; font-weight: bold;">
+                  Тавигдах шаардлага
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Аудиторын батламжтай, мэргэжлээрээ 2-с дээш жил ажилласан, Аудитын стандарт, хуулийн зохицуулалтуудын дагуу бичиг баримт боловсруулах чадвартай байх </li>
+                    <li><i class="bi bi-check-circle-fill"></i> Санхүүгийн программ хангамж, хэрэглээний оффис программуудыг чадварлаг эзэмшсэн байх </li>
+                    <li><i class="bi bi-check-circle-fill"></i> Мэргэжлийн ёс зүйтэй, харилцааны соёлтой, нягт нямбай, ажлыг бүрэн гүйцэд хийдэг байх</li>
+                    
+                  </ul>
+              </div>
+              <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/features-1.svg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="job2">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+                <h3>Аудиторын туслах таныг ажилд урьж байна</h3>
+                <p class="fst-italic" style="margin-top: 20px; color: black; font-weight: bold;">
+                  Гүйцэтгэх үүрэг
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Аудитын багт оролцож аудиторын удирдлага дор аудитын баримт бүрдүүлэх, түүвэр тооцоолол хийх, ажлын төлөвлөгөөний дагуу горим сорилыг хэрэгжүүлэх</li>
+
+                </ul>
+
+                <p class="fst-italic" style="margin-top: 20px; color: black; font-weight: bold;">
+                  Тавигдах шаардлага
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Санхүү, нягтлан бодох бүртгэлийн чиглэлээр бакалавр болон түүнээс дээш зэрэгтэй байх</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Бие дааж тайлан баланс гаргасан туршлагатай, чадвартай байх</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Санхүүгийн программ хангамж, хэрэглээний оффис программуудыг чадварлаг эзэмшсэн байх </li>
+                    <li><i class="bi bi-check-circle-fill"></i> Мэргэжлийн ёс зүйтэй, харилцааны соёлтой, нягт нямбай, ажлыг бүрэн гүйцэд хийдэг байх</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Өдөр тутамд шинэ зүйлд суралцаж, өсч дэвжих хүсэл эрмэлзэлтэй байх</li>
+                    
+                  </ul>
+              </div>
+              <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/features-1.svg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="job3">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+                <h3>Нягтлан бодогч таныг ажилд урьж байна</h3>
+                <p class="fst-italic" style="margin-top: 20px; color: black; font-weight: bold;">
+                  Гүйцэтгэх үүрэг
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Үйлчлүүлэгч байгууллагын санхүүгийн баримт материалыг хүлээн авч ажил, гүйлгээ мэдээллийг программд шивж оруулах</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Байгууллагын санхүүгийн тайлан балансыг гаргаж, холбогдох байгууллагад илгээх</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Цалингийн тооцоолол хийж, нийгмийн даатгалын тайлан гаргаж илгээх</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Улирал тутам холбогдох татварын тайланг шивэлт хийж баталгаажуулах ажлыг хариуцах</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Гаргасан тайлангаа үйлчлүүлэгч байгууллагын удирдлагад танилцуулж, зөвлөгөө өгөх</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Ажлын баримтыг эмхлэн цэгцэлж, үдэж дугаарлаж, үйлчлүүлэгч байгууллагад хүлээлгэн өгөх</li>
+                   
+                </ul>
+
+                <p class="fst-italic" style="margin-top: 20px; color: black; font-weight: bold;">
+                  Тавигдах шаардлага
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Нягтлан бодох бүртгэлийн чиглэлээр бакалавр болон түүнээс дээш зэрэгтэй байх</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Бие дааж тайлан баланс гаргасан туршлагатай, чадвартай байх</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Санхүүгийн программ хангамж, хэрэглээний оффис программуудыг чадварлаг эзэмшсэн байх </li>
+                    <li><i class="bi bi-check-circle-fill"></i> Мэргэжлийн ёс зүйтэй, харилцааны соёлтой, нягт нямбай, ажлыг бүрэн гүйцэд хийдэг байх </li>
+                    <li><i class="bi bi-check-circle-fill"></i> Өдөр тутамд шинэ зүйлд суралцаж, өсч дэвжих хүсэл эрмэлзэлтэй байх</li>
+                    
+                  </ul>
+              </div>
+              <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/features-1.svg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Нээлттэй ажлын байр -->
+
+    <!-- ======= Үйлчилгээ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Үйлчилгээ</h2>
+          <p>Манай компани дараах төрлийн үйлчилгээг үзүүлж байна.</p>
+        </div>
+
+        <div class="row gy-5">
+
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/services-1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Аудит, баталгаажуулалтын үйлчилгээ</h3>
+                </a>
+                <div><ul>
+                  <li>Санхүүгийн тайлангийн аудит</li>
+                  <li>Санхүүгийн тайланг нягтлах ажил</li>
+                  <li>Бусад баталгаажуулах ажил</li>
+              
+                </ul></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6  col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/services-6.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-chat-square-text"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Dayansoft ERP программ нэвтрүүлэх үйлчилгээ</h3>
+                </a>
+                <p>Нягтлан бодох бүртгэлийн Даянсофт ERP программ нэвтрүүлэх тал дээр Даянсофт ХХК-тай хамтран ажиллаж байна.</p>
+                <a href="#" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row gy-5">
+         
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/services-2.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-broadcast"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Нягтлан бодох бүртгэлийн зөвлөх үйлчилгээ /онлайн, биечлэн/</h3>
+                </a>
+                <ul>
+                  <li>Үйл ажиллагааны онцлог чиглэлд тохирсон Нягтлан бодох бүртгэлийн данс, бүртгэлээ хэрхэн зохион байгуулах талаар зөвлөгөө өгнө</li>
+                  <li>Нягтлан бодох бүртгэлийн тулгамдсан асуудлуудаар зөвлөгөө өгнө</li>
+                  <li>Тооцооны нягтлан бодогчтой байгууллагуудад ерөнхий нягтлан бодогчийн үйлчилгээ үзүүлж санхүүгийн бүртгэлийг хянаж, зөвлөгөө өгч хамтран ажиллана</li>
+                  <p style="color:black; font-size: medium; margin-top: 10px;">Дээрх үйлчилгээг сараар, улирлаар, жилээр авч болно</p>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/services-6.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-chat-square-text"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Санхүүгийн бүртгэл хөтөлж, санхүү, татварын тайлан гаргах цогц үйлчилгээ</h3>
+                </a>
+                <ul>
+                  <li>Байгууллагын санхүүгийн баримтуудыг тогтмол авч нягтлан бодох бүртгэлийг хөтөлнө, цалинтай холбоотой тооцоолол хийж НДШ-ийн тайлан гаргана </li>
+                  <li>Ибаримт шивэх, НӨАТ, ХХОАТ, ААНОАТ гэх мэт үйл ажиллаааны чиглэлтэй холбогдох бүх Татварын тайлангуудыг гаргаж татварын сайтад илгээнэ </li>
+                  <li>Улирлын Санхүүгийн тайлангуудыг гаргаж холбогдох санхүүгийн сайтад илгээнэ</li>
+                  <li>Жилийн эцэст бүх баталгаажсан тайлан, анхан шатны баримтыг үдэж архивлан ААН-ын удирдлагад хүлээлгэн өгнө</li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section><!-- End Үйлчилгээ -->
+
+    <!-- ======= Сэтгэгдэл ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="testimonials-slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Батболд</h3>
+                <h4>Даянсофт компани</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Бид олон жил хамтран ажиллаж байна. Хамтран ажиллахад таатай, туршлагатай хамт олон.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Гэрэлчимэг</h3>
+                <h4>Дизайнер</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Найдвартай хамт олноор үйлчлүүлэх үргэлж л сайхан байдаг даа... Ажлын амжилт хүсье
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Түвшинжаргал</h3>
+                <h4>Дадлагажигч оюутан</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                    Онолоос гадна практик ажлуудыг сурч авсан. Найрсаг, халуун дулаан уур амьсгалтай хамт олон шүү
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Сэтгэгдэл-->
+
+    <!-- ======= Үнийн мэдээлэл ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Үнийн мэдээлэл</h2>
+          <p>Үнийн санал авах цэсээр мэдээллээ ирүүлээрэй</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item featured">
+
+              <div class="pricing-header">
+                <h3>Аудит, баталгаажуулалтын үйлчилгээ</h3>
+              </div>
+
+              <ul>
+                <li><i class="bi bi-dot"></i> <span style="text-align: justify;">Монгол Улсын Сангийн Сайдын 2022-05-20-ны өдрийн 113-р тушаалаар баталсан Аудитын үйлчилгээний төлбөрийн жишиг үнийг баримтална.</span></li>
+                <li><i class="bi bi-dot"></i> <span style="text-align: justify;">Аудитын багийн нэг цагийн үнэлгээг гаргахдаа тухайн компанийн <strong style="color: #0ea2bd;">нийт хөрөнгийн хэмжээ</strong> ба <strong style="color: #0ea2bd;">борлуулалтын орлогоос</strong> тооцно</span></li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-item">
+
+              <div class="pricing-header">
+                <h3>НББ-ийн зөвлөх үйлчилгээ /онлайн, биечлэн/</h3>
+              </div>
+
+              <ul>
+                <li><i class="bi bi-dot"></i> <span style="text-align: center;">Данс, бүртгэлээ хэрхэн зохион байгуулах тухай (<strong>1 цаг</strong>) - 110к</span></li>
+                <li><i class="bi bi-dot"></i> <span style="text-align: center;">Тулгамдсан асуудлуудаар зөвлөгөө өгөх <br/>(<strong>1 цаг</strong>) - 110к </span></li>
+                <li><i class="bi bi-dot"></i> <span style="text-align: justify;">Ерөнхий нягтлан бодогчийн зөвлөх үйлчилгээг тухайн байгууллагын ажил гүйлгээний тоо, нарийн төвөгтэй байдал, сар, улирал, жилээр зөвлөгөө авахаас хамаарч үнэ тогтоогдоно. </spa>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="pricing-item featured">
+
+              <div class="pricing-header">
+                <div style="font-size: 24px; font-weight: bolder; color: white; padding: 15px;">Санхүүгийн бүртгэл хөтөлж, тайлан гаргах цогц үйлчилгээ</div>
+              </div>
+
+              <ul>
+                <li><i class="bi bi-dot"></i> <span>Ажил гүйлгээний тоо, үйл ажиллагааны чиглэлээс хамаарч үнэ тогтоогдоно </span></li>
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section-header" style="margin-top: 2rem;">
+          <h2>Dayansoft ERP программ нэвтрүүлэлтийн үнийн мэдээлэл</h2>
+          <p>Дараах 3 төрлийн үйлчилгээ байна</p>
+        </div>
+        
+        <div class="row gy-4">
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item featured">
+
+              <div class="pricing-header">
+                <h5 style="color: white; ">Dayansoft ERP программын сургалтын үйлчилгээ</h5>
+              </div>
+
+              <ul>
+                <li><span style="text-align: center;">Онлайн болон биечлэн сургалт</span></li>
+                
+                <li><i class="bi bi-dot"></i> <span>4 цаг - 320k</span></li>
+                <li><i class="bi bi-dot"></i> <span>8 цаг - 560k</span></li>
+                <li><i class="bi bi-dot"></i> <span>16 цаг - 1040k</span></li>
+                
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-item">
+
+              <div class="pricing-header">
+                <h5 style="color: white; text-align: center;">Dayansoft ERP программын сургалт болон НББ-ийн зөвлөх үйлчилгээ</h5>
+              </div>
+
+              <ul>
+                <li> <span>Онлайн, биечлэн сургалт болон НББ-ийн зөвлөх үйлчилгээ</span></li>
+                <li><i class="bi bi-dot"></i> <span>8 цаг - 760k</span></li>
+                <li><i class="bi bi-dot"></i> <span>16 цаг - 1280k</spa>
+                </li>
+                <li><i class="bi bi-dot"></i> <span>32 цаг - 2160k</spa>
+                </li>
+                
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="pricing-item featured">
+
+              <div class="pricing-header">
+                <h5 style="color: white;">Dayansoft ERP программын сургалт, НББ-ийн зөвлөх, санхүү татварын тайлан гаргах үйлчилгээ</h5>
+              </div>
+
+              <ul>
+                <li> <span>- Программын цогц сургалт /+дадлага/,</span></li>
+                <li></i> <span>- Нягтлан бодох бүртгэлийн сургалт <br>/ 1 сарын гүйлгээгээр/</span></li>
+                <li></i> <span>- Санхүү, татварын тайлан гаргах сургалт</span></li>
+                <li><i class="bi bi-dot"></i> <span>56 цаг - 2800k</spa>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Асуултууд======= -->
+    <section id="faq" class="faq">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content px-xl-5">
+              <h3>Тогтмол асуудаг <strong>асуултууд</strong></h3>
+              
+            </div>
+
+            <div class="accordion accordion-flush px-xl-5" id="faqlist">
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                    <i class="bi bi-question-circle question-icon"></i>
+                    Манай компани заавал аудит хийлгэх шаардлагатай компани мөн үү?
+                  </button>
+                </h3>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Нийт хөрөнгийн хэмжээ 0,5 тэрбум, эсвэл орлогын хэмжээ 1,5 тэрбум төгрөгөөс дээш байх, аль нэг шалгуурыг хангасан тохиолдолд</li>
+                      <li>Нэгтгэсэн санхүүгийн тайлан гаргадаг аж ахуй нэгж байгууллага</li>
+                      <li>Өөрчлөн байгуулагдаж байгаа болон татан буугдаж байгаа эсхүл, бүх хөрөнгөө дуудлага худалдаагаар худалдах гэж байгаа аж ахуй нэгж байгууллага</li>
+                      <li>Гадаадын хөрөнгө оруулалттай аж ахуй нэгж байгууллага</li>
+                      <li>Сангууд</li>
+                      <li>Монгол улсын олон улсын гэрээнд санхүүгийн тайландаа заавал аудит хийлгэхээр заасан бусад аж ахуй нэгж байгууллага</li>
+                      <li>Гадаад дотоодын хөрөнгийн биржид бүртгүүлсэн бүх төрлийн хувьцаат компани</li>
+                      <li>Гадаад дотоодын хөрөнгийн биржид бүртгүүлэхээр хүсэлт гаргасан компани</li>
+                      <li>Банк, ББСБ, Даатгал, Даатгалын мэргэжлийн оролцогч, ХЗХ, Үнэт цаас, Хөрөнгөөр баталгаажсан үнэт цаас гаргах,
+                        Зээлийн мэдээллийн үйл ажиллагаа эрхлэх, Ашигт малтмал ашиглах, Газрын тосны бүтээгдэхүүний үйлдвэрлэл эрхлэх, 
+                        Аудит, Үнэт цаас үйлдвэрлэх, Эд мөнгөний хонжворт сугалаа гаргах, Хөрөнгийн үнэлгээ, Татварын мэргэшсэн зөвлөх 
+                        үйлчилгээний чиглэлээр тусгай зөвшөөрөлтэй аж ахуй нэгж байгууллага</li>
+                      <li>Төрийн болон орон нутгийн өмчит, тэдгээр өмчийн оролцоотой аж ахуй нэгж байгууллага</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                    <i class="bi bi-question-circle question-icon"></i>
+                    Аудит хэдээр хийх вэ?
+                  </button>
+                </h3>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Үнийн санал авах цэсээр борлуулалтын орлого, нийт хөрөнгийн дүнгийн мэдээллээ явуулснаар үнэ тогтоогдоно
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                    <i class="bi bi-question-circle question-icon"></i>
+                    Тендерийн материал бүрдүүлэх зорилгоор аудит хийлгэж болох уу?
+                  </button>
+                </h3>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">Санхүүгийн тайланд аудитын олон улсын стандартын дагуу аудит хийж, дүгнэлт гаргана </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                    <i class="bi bi-question-circle question-icon"></i>
+                    Үнийн дүнд НӨАТ орсон уу?
+                  </button>
+                </h3>
+                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    <i class="bi bi-question-circle question-icon"></i>
+                    Манай байгууллага нь НӨАТ суутган төлөгч байгууллага тул бүх үйлчилгээний үнийн дүнд НӨАТ багтсан болно
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
+                    <i class="bi bi-question-circle question-icon"></i>
+                    Аудит хийлгэхэд ямар материал бүрдүүлэх шаардлагатай вэ?
+                  </button>
+                </h3>
+                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Таньтай гэрээ байгуулсны дараа бид таны email хаягаар аудитад ирүүлэх материалын жагсаалтыг илгээнэ.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="650">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-6">
+                    <i class="bi bi-question-circle question-icon"></i>
+                    Тайлан гаргуулах ямар төрлийн үйлчилгээнүүд байна вэ?
+                  </button>
+                </h3>
+                <div id="faq-content-6" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    2 төрлийн үйлчилгээ байна.
+                    Үүнд:
+                    <ul>
+                      <li>
+                        НББ-ийн гүйлгээгээ хянуулаад сар, улирал, жилийн эцэст татварын тооцоолол хийлгэж тайлангаа гаргуулах
+                      </li>
+                      <li>Анхан шатны баримтаа өгөөд НББ-ийн үйлчилгээг цогцоор нь авах </li>
+                    </ul> 
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="700">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-7">
+                    <i class="bi bi-question-circle question-icon"></i>
+                    Тайлан гаргуулах үнэ хэд вэ?
+                  </button>
+                </h3>
+                <div id="faq-content-7" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Ажил гүйлгээний тоо, үйл ажиллагааны чиглэлээс хамаарч үнэ тогтоогдоно.<br/>
+                    /Үнийн санал авах цэсээр мэдээллээ ирүүлнэ үү/ 
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/faq.jpg");'>&nbsp;</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Гэрээ байгуулах ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+            <h2>Гэрээ байгуулах</h2>
+            <p>Гэрээ байгуулах бол дараахыг бөглөөрэй.</p>
+        </div>
+          <form action="/customer/add-geree" method="POST" role="form" >
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="company_registr" class="form-control" id="company_registr" placeholder="Байгууллагын регистр" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Захирлын овог нэр" required>
+                 
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="company_name" class="form-control" id="company_name" placeholder="Байгууллагын нэр" required>
+                  <!-- -->
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <!-- -->
+                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Захирлын холбогдох утас" required>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="email"  class="form-control"  id="email" placeholder="Email хаяг" required> 
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" name="name" class="form-control" id="nybo_name" placeholder="Нягтлан бодогчийн овог нэр" required>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="brand" class="form-control" id="brand" placeholder="Хаяг, байршил">
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" name="phone" class="form-control" id="nybo_phone" placeholder="Нягтлан бодогчийн холбогдох утас" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="3" placeholder="Ямар үйлчилгээ авах талаараа бичээрэй" required></textarea>
+              </div>
+      
+              <div class="text-center mt-3"><button type="submit" class="btn rounded" style="color: white; background-color: #0ea2bd;">Илгээх</button></div>
+          </form>
+
+      </div>
+    </section>
+    <!-- ======= Үнийн санал авах ======= -->
+    <section id="contact2" class="contact">
+      <div class="container">
+        <div class="section-header">
+            <h2>Үнийн санал авах</h2>
+            <p>Үнийн санал бэлдүүлж бол дараахыг бөглөөрэй.</p>
+        </div>
+            <form action="/customer/add-geree" method="POST" role="form" >
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="company_registr" class="form-control" id="company_registr" placeholder="Байгууллагын регистр" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" name="brand" class="form-control" id="brand" placeholder="Үйл ажиллагааны чиглэл">
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="company_name" class="form-control" id="company_name" placeholder="Байгууллагын нэр" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Борлуулалтын орлого" required>
+                </div>
+              
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="email"  class="form-control"  id="email" placeholder="Email хаяг" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Нийт хөрөнгийн дүн" required>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Холбогдох утас" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <textarea class="form-control" name="message" rows="3" placeholder="Ямар үйлчилгээ авах талаараа бичээрэй" required></textarea>
+                </div>
+              </div>      
+              <div class="text-center mt-3"><button type="submit" class="btn rounded" style="color: white; background-color: #0ea2bd;">Илгээх</button></div>
+            </form>
+
+      </div>
+    </section>
+
+    <section id="contact3" class="contact">
+      <div class="container">
+
+        <div class="row gy-5 gx-lg-5">
+        </div>
+        <div class="col-lg-12" id="php-email-form">
+        </div>
+        <div class="section-header">
+            <h2>Үнийн санал авах</h2>
+            <p>Үнийн санал бэлдүүлж авах эсвэл гэрээ байгуулах бол дараахыг бөглөөрэй.</p>
+        </div>
+            <form action="/customer/add-geree" method="POST" role="form" >
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="company_registr" class="form-control" id="company_registr" placeholder="Байгууллагын регистр" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" name="company_name" class="form-control" id="company_name" placeholder="Байгууллагын нэр" required>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="brand" class="form-control" id="brand" placeholder="Хаяг, байршил">
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" name="email"  class="form-control"  id="email" placeholder="Email хаяг" required>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Таны нэр" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Холбогдох утас" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="4" placeholder="Ямар үйлчилгээ авах талаараа бичээрэй" required></textarea>
+              </div>
+      
+              <div class="text-center mt-3"><button type="submit" class="btn rounded" style="color: white; background-color: #0ea2bd;">Илгээх</button></div>
+            </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-content">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>AMN аудит</h3>
+              <p>
+                <strong>Ажлын цаг:</strong><br>
+                <h4>
+                10:00 - 19:00<br><br>
+              </h4>
+
+                <strong>Хаяг:</strong><br>
+                <h4>
+                Улаанбаатар хот,<br>
+                Сүхбаатар дүүрэг, 1-р хороо, Энхтайвны өргөн чөлөө - 23, UBH center- 9 давхар 913Б<br><br>
+                <a target='_blank' href="https://www.google.com/maps/place/UBH+Center/@47.917375,106.9239795,17.25z/data=!4m6!3m5!1s0x5d9692476541435f:0x3d0ea636e74f9173!8m2!3d47.9174357!4d106.924008!16s%2Fg%2F11bycfgpp7">
+                  Google map дээр хаяг харах
+                </a>
+              </h4>
+            
+                
+                <strong>Утас:</strong> <h4>7709-8768,<br> 9909-3146,<br> 9909-8768 </h4><br>
+                <strong>Email:</strong> auditamn@gmail.com<br>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-6 footer-links">
+            <h4>Чухал холбоосууд</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i>Хуулийн сайт: <a target="_blank" href="https://legalinfo.mn/mn/" style="margin-left: 10px;">https://legalinfo.mn/mn/</a></li>
+              <li><i class="bi bi-chevron-right"></i>Ибаланс <a target="_blank" href="https://e-balance.mof.gov.mn" style="margin-left: 10px;">https://e-balance.mof.gov.mn </a></li>
+              <li><i class="bi bi-chevron-right"></i>Татварын нэвтрэлтийн нэгдсэн систем <a target="_blank" href="https://auth.itc.gov.mn/" style="margin-left: 10px;">https://auth.itc.gov.mn/</a></li>
+              <li><i class="bi bi-chevron-right"></i>Монголын татварын алба     <a target="_blank" href="https://mta.gov.mn/home/" style="margin-left: 10px;">https://mta.gov.mn/home/</a></li>
+              <li><i class="bi bi-chevron-right"></i>Монгол банк  <a target="_blank" href="https://www.mongolbank.mn/mn/" style="margin-left: 10px;">https://www.mongolbank.mn/mn/</a></li>
+              <li><i class="bi bi-chevron-right"></i>ММНБИ <a target="_blank" href="http://www.monicpa.mn/c/563188/" style="margin-left: 10px;">http://www.monicpa.mn/c/563188/</a></li>
+              <li><i class="bi bi-chevron-right"></i>ТМЗНийгэмлэг <a target="_blank" href="https://www.cpta.mn//" style="margin-left: 10px;">https://www.cpta.mn//</a></li>
+            </ul>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 ">
+            <h4>Санал хүсэлт</h4>
+            <p>Та бидэнтэй холбоотой санал хүсэлт байвал үлдээгээрэй</p>
+            <form action="/feedback/add-feedback" method="post">
+              <input type="text" class="form-control" name="feedback" placeholder="Санал, хүсэлт ..." required>
+              <input type="text" class="form-control" name="phone" placeholder="Холбогдох утас Utas shalgahgui bj bolno" style="margin-top: 0.5rem;" required><input type="submit" class="btn rounded" style="color: white; background-color: #0ea2bd; margin-top: 5px;" value="Илгээх">
+            
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div class="copyright">
+            &copy; <strong><span>Эй Эм Эн аудит ХХК</span></strong>. Бүх эрх хуулиар хамгаалагдсан.
+          </div>
+          <div class="credits">
+           coded by <a href="#">AnonymousPro</a>
+          </div>
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
