@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if ($_SESSION['isLoggedIn'] != 'true') {
+    redirect("/");
+}
+
 if ($_SESSION['role'] == 'admin') {
     $id = $_GET['id'];
 
@@ -24,9 +28,10 @@ if ($_SESSION['role'] == 'admin') {
                 $_SESSION['success'] = "Хэрэглэгчийг амжилттай устгалаа";
             }
         } catch (Exception $e) {
-            // error table-d bichih?
 
             $_SESSION['errors'] = "Хэрэглэгчийг устгах үед алдаа гарлаа.";
+            _exec("insert into errors set created_date=now(), note='users delete', ip=?, error_code=?, error=?,file=?, line=?", "sissi",[getIpAddress(), $e->getCode(),$e->getMessage(), $e->getFile(), $e->getLine() ], $count );
+
         }
     }
 

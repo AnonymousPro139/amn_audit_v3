@@ -1,10 +1,9 @@
 <?php
 require 'header.php';
 
-_selectAll($stmt, $count, "select * from feedback order by id desc limit 0, 100", $id, $message, $created_date);
-
+_selectAll($stmt, $count, "select * from feedback order by id desc limit 0, 100", $id, $message, $phone, $created_date);
+$counter = $count;
 ?>
-
 
 <?php if (!empty($_SESSION['success'])) : ?>
     <div class="container">
@@ -25,18 +24,20 @@ endif; ?>
 endif; ?>
 
 <div class="row col-12">
-    <div style="margin: 12px;">
-        <h3>Манай веб сайтад ирсэн санал хүсэлт</h3>
+    <div style="margin: 12px; text-align: center">
+        <h3>Санал хүсэлт</h3>
     </div>
     <div class="col-md-12">
         <div class="card">
             <div class="card-body">
                 <div class="table-responsive">
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
                     <table class="table table-bordered mb-0">
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>Мессеж</th>
+                                <th>Утас</th>
+                                <th>Санал, хүсэлт</th>
                                 <th>Огноо</th>
                                 <th></th>
 
@@ -45,16 +46,22 @@ endif; ?>
                         <tbody>
                             <?php while (_fetch($stmt)) : ?>
                                 <tr>
-                                    <td><?= $id ?></td>
+                                    <td><?= $counter ?></td>
+                                    <td><?= $phone ?></td>
+                                    
                                     <td style="width: 60%;"><?= $message ?></td>
                                     <td><?= $created_date ?></td>
-                                    <td align="center"> <a href="/feedback/delete-feedback?id=<?= $id ?>" onclick="confirmDelete()"><i class="bi bi-trash3-fill" style="color: red;"></i></a></td>
 
+                                    <?php if ($_SESSION['role'] == 'admin') : ?>
+                                        <td align="center"> <a href="/feedback/delete-feedback?id=<?= $id ?>" onclick="confirmDelete()"><i class="bi bi-trash3-fill" style="color: red;"></i></a></td>
+                                    <?php endif; ?>
                                 </tr>
+                                <?php $counter = $counter - 1; ?>
                             <?php endwhile; ?>
                             <?php _close_stmt($stmt); ?>
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </div>

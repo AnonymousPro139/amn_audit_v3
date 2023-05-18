@@ -6,7 +6,7 @@
 
       <div class="d-flex flex-column align-items-center align-items-lg-start">
         <div class="copyright">
-          &copy; <strong><span>Amn аудит ХК</span></strong>. Бүх эрх хуулиар хамгаалагдсан.
+          &copy; <strong><span>Amn аудит ХХК</span></strong>. Бүх эрх хуулиар хамгаалагдсан.
         </div>
         <div class="credits">
           coded by <a href="#">AnonymousPro</a>
@@ -14,17 +14,13 @@
       </div>
 
       <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
   </div>
 
-</footer><!-- End Footer -->
+</footer>
 
 <!-- Vendor JS Files -->
 <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $phone = post('phone', 10);
 $password = post('userpassword', 12);
 
@@ -14,10 +15,11 @@ if (strlen($password) < 3) {
 }
 
 if (sizeof($errors) > 0) {
-
     $_SESSION['errors'] = $errors;
     redirect('/sign-in');
 }
+
+$password = md5(SALT.$password);
 
 _selectRow(
     $stmt,
@@ -32,12 +34,11 @@ _selectRow(
 );
 
 
-if (!empty($name)) {
+if (!empty($phone) && !empty($name)) {
     $_SESSION['name'] = $name;
     $_SESSION['email'] = $email;
     $_SESSION['phone'] = $phone;
     $_SESSION['role'] = $role;
-
     $_SESSION['isLoggedIn'] = "true";
 
     redirect("/user/home");

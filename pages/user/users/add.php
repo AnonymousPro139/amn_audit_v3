@@ -1,8 +1,12 @@
 <?php
 require ROOT . '/pages/user/header.php';
 
-if ($_SESSION['role'] != 'admin') {
+if ($_SESSION['isLoggedIn'] != 'true') {
     redirect("/");
+}
+
+if ($_SESSION['role'] != 'admin') {
+    redirect("/user/home");
 }
 ?>
 
@@ -14,7 +18,7 @@ if ($_SESSION['role'] != 'admin') {
             <label for="phone">Хэрэглэгч</label>
             <div class="input-group">
 
-                <input type="text" class="form-control" name="phone" placeholder="утас">
+                <input type="text" class="form-control" name="phone" placeholder="Утасны дугаар">
             </div>
         </div>
 
@@ -22,15 +26,7 @@ if ($_SESSION['role'] != 'admin') {
             <label for="phone">Email хаяг</label>
             <div class="input-group">
 
-                <input type="text" class="form-control" name="email" placeholder="email">
-            </div>
-        </div>
-
-        <div class="form-group" style="margin-top: 5px;">
-            <label for="phone">Хандах эрх</label>
-            <div class="input-group">
-
-                <input type="text" class="form-control" name="role" placeholder="эрх">
+                <input type="text" class="form-control" name="email" placeholder="И-майл хаяг бичихгүй байж болно.">
             </div>
         </div>
 
@@ -38,7 +34,7 @@ if ($_SESSION['role'] != 'admin') {
             <label for="userpassword">Нууц үг</label>
             <div class="input-group">
 
-                <input type="password" class="form-control" name="password" placeholder="Нууц үг оруулах">
+                <input type="password" class="form-control" name="password" placeholder="6-с дээш урттай нууц үг оруулаарай">
             </div>
         </div>
 

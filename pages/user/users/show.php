@@ -2,7 +2,7 @@
 require ROOT . '/pages/user/header.php';
 
 if ($_SESSION['role'] != 'admin') {
-    redirect("/");
+    redirect("/user/home");
 }
 
 _selectAll($stmt, $count, "select * from users order by id desc limit 0, 100", $id, $name, $phone, $email, $password, $created_date, $role);
@@ -48,10 +48,10 @@ endif; ?>
 endif; ?>
 
 <div class="row col-12">
-    <div style="margin: 12px;">
+    <div style="margin: 12px; text-align: center">
         <h3>Системийн хэрэглэгчид</h3>
         <a href="/user/users/add">
-            <button class="btn btn-success btn-md">+ Шинэ хэрэглэгч нэмэх</button>
+            <button class="btn btn-success btn-md" style="margin-top: 10px;">+ Шинэ хэрэглэгч нэмэх</button>
         </a>
     </div>
     <div class="col-md-12">

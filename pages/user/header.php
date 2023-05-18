@@ -34,7 +34,6 @@ if ($_SESSION['isLoggedIn'] != "true") {
     <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Variables CSS Files. Uncomment your preferred color scheme -->
     <link href="/assets/css/variables.css" rel="stylesheet">
     <link href="/assets/css/main.css" rel="stylesheet">
 
@@ -43,7 +42,6 @@ if ($_SESSION['isLoggedIn'] != "true") {
 
 <body>
 
-    <!-- ======= Header ======= -->
     <header id="header" class="header" data-scrollto-offset="0">
         <div class="container-fluid d-flex align-items-center justify-content-between">
 
@@ -52,13 +50,14 @@ if ($_SESSION['isLoggedIn'] != "true") {
                 <h1>AMN аудит<span>.</span> </h1>
             </a>
 
-            <h5>Хэрэглэгч: <?= $_SESSION['phone']; ?></h5>
+            <h4>Хэрэглэгч: <?= $_SESSION['phone']; ?><?php if($_SESSION['role'] == 'admin') echo '(АДМИН)'; ?></h4>
 
             <nav id="navbar" class="navbar">
                 <ul>
 
-                    <li><a class="nav-link scrollto <?php if ($_SERVER['REDIRECT_URL'] == "/user/home") echo 'active'; ?>" href="/user/home">Ирсэн мэдээлэл</a></li>
-                    <li><a class="nav-link scrollto <?php if ($_SERVER['REDIRECT_URL'] == "/user/feedback") echo 'active'; ?>" href="/user/feedback">Ирсэн санал, хүсэлт</a></li>
+                    <li><a class="nav-link scrollto <?php if ($_SERVER['REDIRECT_URL'] == "/user/home") echo 'active'; ?>" href="/user/home">Гэрээ байгуулах</a></li>
+                    <li><a class="nav-link scrollto <?php if ($_SERVER['REDIRECT_URL'] == "/user/suggestion") echo 'active'; ?>" href="/user/suggestion">Үнийн санал авах</a></li>
+                    <li><a class="nav-link scrollto <?php if ($_SERVER['REDIRECT_URL'] == "/user/feedback") echo 'active'; ?>" href="/user/feedback">Санал, хүсэлт</a></li>
 
                     <?php if ($_SESSION['role'] == 'admin') : ?>
                         <li><a class="nav-link scrollto <?php if ($_SERVER['REDIRECT_URL'] == "/user/users/show") echo 'active'; ?>" href="/user/users/show">Системийн хэрэглэгчид</a></li>
@@ -72,9 +71,8 @@ if ($_SESSION['isLoggedIn'] != "true") {
             <a class="btn-getstarted scrollto" href="/sign-out">Гарах</a>
 
         </div>
-    </header><!-- End Header -->
+    </header>
 
     <div class="main-content" style="margin-top: 40; margin-bottom: 45;">
 
-        <!-- <div class="page-content"> -->
         <div class="container-fluid">

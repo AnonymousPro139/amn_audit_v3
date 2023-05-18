@@ -3295,3 +3295,12 @@ section {
   background: var(--color-primary);
   text-decoration: none;
 }
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 600px;
+  overflow: auto;
+  }
+  .table-wrapper-scroll-y {
+  display: block;
+  }

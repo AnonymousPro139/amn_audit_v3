@@ -1,11 +1,10 @@
 <?php
 define("ROOT", dirname(dirname(__FILE__)));
-
 require ROOT . '/inc/conf.php';
-
 require ROOT . '/inc/db.php';
 
 $page = @$_SERVER['REDIRECT_URL'];
+
 
 if (empty($page)) {
     require ROOT . '/pages/index.html';
@@ -23,6 +22,7 @@ function dd($arr)
 {
     echo '<pre>';
     print_r($arr);
+    exit;
 }
 
 function redirect($url)
@@ -33,15 +33,15 @@ function redirect($url)
 
 function post($name, $len = null)
 {
-    $value = $_POST[$name];
-
-    $value = addslashes($value);
+    $value = trim($_POST[$name]);
+    $value = stripslashes($value); //  \' --> ' ; O\'reilly? -> O'reilly
+    $value = addslashes($value); // quote string with slashes -> ""  \"\"
+    $value = htmlspecialchars($value); // convert special chars to html entity  <a --> &lt;a
 
     if (!is_null($len) && mb_strlen($value)) {
         $value = mb_substr($value, 0, $len);
-        // security problem uusgene
-        // echo "security";
     }
+
     return $value;
 }
 
@@ -51,4 +51,15 @@ function today()
 
     $ret = $today["year"] . "-" . $today["mon"] . "-" . $today["mday"];
     return $ret;
+}
+
+function getIpAddress(){
+    if(!empty($_SERVER['HTTP_CLIENT_IP'])){ // check ip from share internet
+        return $_SERVER['HTTP_CLIENT_IP'];
+    }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+        // to check ip is pass from proxy
+        return $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+
+    return $_SERVER['REMOTE_ADDR'];
 }

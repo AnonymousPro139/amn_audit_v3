@@ -9,8 +9,8 @@ session_start();
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title><?php $DOMAIN;?></title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Amnaudit ХХК нь аудит баталгаажуулалт, нягтлан бодох бүртгэлийн зөвлөх, тайлан гаргах, программ нэвтрэлтийн үйлчилгээг мэргэжлийн өндөр түвшинд үзүүлж байна" name="description">
+  <meta content="amn audit,АМН аудит,ЭЙ ЭМ ЭН, audit, аудит, нягтлан бодох, nyagtlan bodoh, dayansoft, audit tailan, аудитын тайлан" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -28,16 +28,8 @@ session_start();
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
   <link href="assets/css/variables.css" rel="stylesheet">
-  <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
 
-  <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
@@ -59,16 +51,16 @@ session_start();
 
           <li><a class="nav-link scrollto" href="index.html#services">Үйлчилгээ</a></li>
           <li><a class="nav-link scrollto" href="index.html#pricing">Үнийн мэдээлэл</a></li>
-          <li><a class="nav-link scrollto" href="index.html#contact">Гэрээ байгуулах</a></li>
-          <li><a class="nav-link scrollto" href="index.html#contact">Үнийн санал авах</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contract">Гэрээ байгуулах</a></li>
+          <li><a class="nav-link scrollto" href="index.html#suggestion">Үнийн санал авах</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">Бидний тухай</a></li>
-          <li class="dropdown megamenu"><a href="index.html#tab-1"><span>Ажилд авъя</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown megamenu"><a href="#jobs"><span>Ажилд авъя</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
 
             <ul>
               <li>
-                <a href="#job1">Аудитор</a>
-                <a href="#job2">Нягтлан бодогч</a>
-                <a href="#job3">Аудиторын туслах</a>
+                <a href="#jobs">Аудитор</a>
+                <a href="#jobs">Нягтлан бодогч</a>
+                <a href="#jobs">Аудиторын туслах</a>
               </li>
             </ul>
           </li>
@@ -76,7 +68,7 @@ session_start();
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav>
 
-      <a class="btn-getstarted scrollto" href="/sign-in">Нэвтрэх</a>
+      <!-- <a class="btn-getstarted scrollto" href="/sign-in">Нэвтрэх</a> -->
 
     </div>
   </header>
@@ -105,7 +97,7 @@ session_start();
       
       <p style="text-align: center;">Бид аудит баталгаажуулалт, нягтлан бодох бүртгэлийн зөвлөх, тайлан гаргах, программ нэвтрүүлэлтийн үйлчилгээг мэргэжлийн өндөр түвшинд үзүүлж байна.</p>
       <div class="d-flex">
-        <a href="#php-email-form" class="btn-get-started scrollto">Гэрээ байгуулах</a>
+        <a href="#contract" class="btn-get-started scrollto">Гэрээ байгуулах</a>
       </div>
     </div>
   </section>
@@ -331,7 +323,7 @@ session_start();
     </section><!-- End Хамтран ажиллагч -->
 
     <!-- ======= Нээлттэй ажлын байр ======= -->
-    <section id="features" class="features">
+    <section id="jobs" class="features">
       <div class="section-header">
         <h2>Нээлттэй ажлын байр</h2>
       </div>
@@ -458,8 +450,6 @@ session_start();
               </div>
             </div>
           </div>
-
-          
 
         </div>
 
@@ -900,50 +890,47 @@ session_start();
     </section>
 
     <!-- ======= Гэрээ байгуулах ======= -->
-    <section id="contact" class="contact">
+    <section id="contract" class="contact">
       <div class="container">
         <div class="section-header">
             <h2>Гэрээ байгуулах</h2>
             <p>Гэрээ байгуулах бол дараахыг бөглөөрэй.</p>
         </div>
-          <form action="/customer/add-geree" method="POST" role="form" >
+          <form action="/contract/add-geree" method="POST" role="form" >
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="company_registr" class="form-control" id="company_registr" placeholder="Байгууллагын регистр" required>
+                  <input type="text" name="company_registr" class="form-control" placeholder="Байгууллагын регистр" required value="ab123123">
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Захирлын овог нэр" required>
-                 
+                  <input type="text" name="director_name" class="form-control" placeholder="Захирлын овог нэр" required value="Bat Dulamtseren">
                 </div>
               </div>
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="company_name" class="form-control" id="company_name" placeholder="Байгууллагын нэр" required>
-                  <!-- -->
+                  <input type="text" name="company_name" class="form-control"placeholder="Байгууллагын нэр" required value="ABCDE LLC">
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <!-- -->
-                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Захирлын холбогдох утас" required>
+                  <input type="number" name="director_phone" class="form-control" placeholder="Захирлын холбогдох утас" required value="88959522">
                 </div>
               </div>
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="email"  class="form-control"  id="email" placeholder="Email хаяг" required> 
+                  <input type="email" name="email"  class="form-control" placeholder="Email хаяг" required value="test_company@gmail.com"> 
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="name" class="form-control" id="nybo_name" placeholder="Нягтлан бодогчийн овог нэр" required>
+                  <input type="text" name="nybo_name" class="form-control" placeholder="Нягтлан бодогчийн овог нэр" required value="Gerelmaa Enkhtuya">
                 </div>
               </div>
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="brand" class="form-control" id="brand" placeholder="Хаяг, байршил">
+                  <input type="text" name="address" class="form-control" placeholder="Хаяг, байршил" value="Baynzurh, 17-r horoo, 35-12-15 toot">
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="phone" class="form-control" id="nybo_phone" placeholder="Нягтлан бодогчийн холбогдох утас" required>
+                  <input type="number" name="nybo_phone" class="form-control" placeholder="Нягтлан бодогчийн холбогдох утас" value="99663322" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="3" placeholder="Ямар үйлчилгээ авах талаараа бичээрэй" required></textarea>
+                <textarea class="form-control" name="message" rows="3" placeholder="Ямар үйлчилгээ авах талаараа бичээрэй" required>тайлан гаргуулах, аудит хийлгэх хүсэлтэй байна, Яаралтай холбогдоорой, баярлалаа</textarea>
               </div>
       
               <div class="text-center mt-3"><button type="submit" class="btn rounded" style="color: white; background-color: #0ea2bd;">Илгээх</button></div>
@@ -952,93 +939,47 @@ session_start();
       </div>
     </section>
     <!-- ======= Үнийн санал авах ======= -->
-    <section id="contact2" class="contact">
+    <section id="suggestion" class="contact">
       <div class="container">
         <div class="section-header">
             <h2>Үнийн санал авах</h2>
-            <p>Үнийн санал бэлдүүлж бол дараахыг бөглөөрэй.</p>
+            <p>Үнийн санал бэлдүүлэх бол дараахыг бөглөөрэй.</p>
         </div>
-            <form action="/customer/add-geree" method="POST" role="form" >
+            <form action="/suggestion/add" method="POST" role="form" >
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="company_registr" class="form-control" id="company_registr" placeholder="Байгууллагын регистр" required>
+                  <input type="text" name="company_registr" class="form-control" placeholder="Байгууллагын регистр" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="brand" class="form-control" id="brand" placeholder="Үйл ажиллагааны чиглэл">
+                  <input type="text" name="brand" class="form-control" placeholder="Үйл ажиллагааны чиглэл">
                 </div>
               </div>
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="company_name" class="form-control" id="company_name" placeholder="Байгууллагын нэр" required>
+                  <input type="text" name="company_name" class="form-control" placeholder="Байгууллагын нэр" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Борлуулалтын орлого" required>
+                  <input type="text" name="borluulalt" class="form-control" placeholder="Борлуулалтын орлого" required>
                 </div>
               
               </div>
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="email"  class="form-control"  id="email" placeholder="Email хаяг" required>
+                  <input type="email" name="email"  class="form-control" placeholder="Email хаяг" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Нийт хөрөнгийн дүн" required>
+                  <input type="text" name="hurungu_dun" class="form-control" placeholder="Нийт хөрөнгийн дүн" required>
                 </div>
               </div>
 
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Холбогдох утас" required>
+                  <input type="number" name="phone" class="form-control" placeholder="Холбогдох утас" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <textarea class="form-control" name="message" rows="3" placeholder="Ямар үйлчилгээ авах талаараа бичээрэй" required></textarea>
                 </div>
               </div>      
-              <div class="text-center mt-3"><button type="submit" class="btn rounded" style="color: white; background-color: #0ea2bd;">Илгээх</button></div>
-            </form>
-
-      </div>
-    </section>
-
-    <section id="contact3" class="contact">
-      <div class="container">
-
-        <div class="row gy-5 gx-lg-5">
-        </div>
-        <div class="col-lg-12" id="php-email-form">
-        </div>
-        <div class="section-header">
-            <h2>Үнийн санал авах</h2>
-            <p>Үнийн санал бэлдүүлж авах эсвэл гэрээ байгуулах бол дараахыг бөглөөрэй.</p>
-        </div>
-            <form action="/customer/add-geree" method="POST" role="form" >
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="company_registr" class="form-control" id="company_registr" placeholder="Байгууллагын регистр" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="company_name" class="form-control" id="company_name" placeholder="Байгууллагын нэр" required>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="brand" class="form-control" id="brand" placeholder="Хаяг, байршил">
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="email"  class="form-control"  id="email" placeholder="Email хаяг" required>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Таны нэр" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Холбогдох утас" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="4" placeholder="Ямар үйлчилгээ авах талаараа бичээрэй" required></textarea>
-              </div>
-      
               <div class="text-center mt-3"><button type="submit" class="btn rounded" style="color: white; background-color: #0ea2bd;">Илгээх</button></div>
             </form>
 
@@ -1096,8 +1037,8 @@ session_start();
             <h4>Санал хүсэлт</h4>
             <p>Та бидэнтэй холбоотой санал хүсэлт байвал үлдээгээрэй</p>
             <form action="/feedback/add-feedback" method="post">
-              <input type="text" class="form-control" name="feedback" placeholder="Санал, хүсэлт ..." required>
-              <input type="text" class="form-control" name="phone" placeholder="Холбогдох утас Utas shalgahgui bj bolno" style="margin-top: 0.5rem;" required><input type="submit" class="btn rounded" style="color: white; background-color: #0ea2bd; margin-top: 5px;" value="Илгээх">
+              <input type="text" class="form-control" name="feedback" placeholder="Санал, хүсэлт" required>
+              <input type="phone" class="form-control" name="phone" placeholder="Холбогдох утас" style="margin-top: 0.5rem;" required><input type="submit" class="btn rounded" style="color: white; background-color: #0ea2bd; margin-top: 5px;" value="Илгээх">
             
             </form>
 
