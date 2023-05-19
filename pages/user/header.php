@@ -34,8 +34,8 @@ if ($_SESSION['isLoggedIn'] != "true") {
     <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <link href="/assets/css/variables.css" rel="stylesheet">
-    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/variables_min.css" rel="stylesheet">
+    <link href="/assets/css/main_min.css" rel="stylesheet">
 
     <script src="/assets/js/admin.js"></script>
 </head>
