@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$company_registr = post('company_registr', 16);
+$company_registrr = post('company_registr', 16);
 $company_name = post('company_name', 60);
 $director_name = post('director_name', 60);
 $director_phone = post('director_phone', 16);
@@ -35,7 +35,7 @@ if (sizeof($errors) == 0) {
         }
     } catch (Exception $e) {
         $_SESSION['errors'] = "Таны илгээсэн мэдээлэл амжилтгүй боллоо!";
-        _exec("insert into errors set created_date=now(), note='add_geree', ip=?, error_code=?, error=?,file=?, line=?", "sissi",[getIpAddress(), $e->getCode(),$e->getMessage(), $e->getFile(), $e->getLine() ], $count );
+        _exec("insert into errors set created_date=now(), note='add_geree', ip=?, error_code=?, error=?,file=?, line=?", "sissi", [getIpAddress(), $e->getCode(), $e->getMessage(), $e->getFile(), $e->getLine()], $count);
     }
 } else {
     $_SESSION['errors'] = "Амжилтгүй!, Та илгээсэн мэдээллээ сайтар шалгана уу.";

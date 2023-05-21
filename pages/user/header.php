@@ -50,7 +50,7 @@ if ($_SESSION['isLoggedIn'] != "true") {
                 <h1>AMN аудит<span>.</span> </h1>
             </a>
 
-            <h4>Хэрэглэгч: <?= $_SESSION['phone']; ?><?php if($_SESSION['role'] == 'admin') echo '(АДМИН)'; ?></h4>
+            <h4>Хэрэглэгч: <?= $_SESSION['phone']; ?><?php if ($_SESSION['role'] == 'admin') echo '(АДМИН)'; ?></h4>
 
             <nav id="navbar" class="navbar">
                 <ul>
@@ -61,6 +61,7 @@ if ($_SESSION['isLoggedIn'] != "true") {
 
                     <?php if ($_SESSION['role'] == 'admin') : ?>
                         <li><a class="nav-link scrollto <?php if ($_SERVER['REDIRECT_URL'] == "/user/users/show") echo 'active'; ?>" href="/user/users/show">Системийн хэрэглэгчид</a></li>
+                        <li><a class="nav-link scrollto <?php if ($_SERVER['REDIRECT_URL'] == "/error/index") echo 'active'; ?>" href="/error/index">Алдаа</a></li>
 
                     <?php endif; ?>
 

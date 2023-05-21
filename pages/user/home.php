@@ -1,7 +1,7 @@
 <?php
 require 'header.php';
 
-_selectAll($stmt, $count, "select * from contracts order by id desc limit 0, 250", $id, $company_name, $company_registr, $director_name, $director_phone,$nybo_name, $nybo_phone, $email, $address, $message, $is_view, $created_date);
+_selectAll($stmt, $count, "select * from contracts order by id desc limit 0, 250", $id, $company_name, $company_registr, $director_name, $director_phone, $nybo_name, $nybo_phone, $email, $address, $message, $is_view, $created_date);
 $counter = $count;
 ?>
 
@@ -52,7 +52,7 @@ endif; ?>
                                 </tr>
                             </thead>
                             <tbody>
-                            
+
                                 <?php while (_fetch($stmt)) : ?>
                                     <tr>
                                         <td><?= $counter ?></td>
@@ -64,7 +64,7 @@ endif; ?>
                                         <td><?= $nybo_phone ?></td>
                                         <td><?= $email ?></td>
                                         <td><?= $address ?></td>
-                                    
+
                                         <td style="width: 25%;"><?= $message ?></td>
                                         <td><?= $created_date ?></td>
 
@@ -73,11 +73,11 @@ endif; ?>
                                         <?php else : ?>
                                             <td align="center"> <a href="/contract/update-geree?id=<?= $id ?>" onclick="confirmShow()"><i class="bi bi-bell-fill" style="color: orange;"></i></a></td>
                                         <?php endif; ?>
-                                        
+
                                         <?php if ($_SESSION['role'] == 'admin') : ?>
                                             <td align="center"> <a href="/contract/edit-geree?id=<?= $id ?>"><i class="bi bi-pencil" style="color: green;"></i></a></td>
                                             <td align="center"> <a href="/contract/delete-geree?id=<?= $id ?>" onclick="confirmDelete()"><i class="bi bi-trash3-fill" style="color: red;"></i></a></td>
-                                         <?php endif; ?>
+                                        <?php endif; ?>
 
                                     </tr>
                                     <?php $counter = $counter - 1; ?>
