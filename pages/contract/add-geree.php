@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$company_registrr = post('company_registr', 16);
+$company_registr = post('company_registr', 16);
 $company_name = post('company_name', 60);
 $director_name = post('director_name', 60);
 $director_phone = post('director_phone', 16);

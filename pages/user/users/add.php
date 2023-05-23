@@ -11,7 +11,7 @@ if ($_SESSION['role'] != 'admin') {
 ?>
 
 <div class="container">
-    <h3>Шинэ хэрэглэгч бүртгэх</h3>
+    <h3 style="text-align: center; margin-top: 10px">Шинэ хэрэглэгч бүртгэх</h3>
 
     <form class="form-horizontal my-4" method="POST" action="/user/users/add-do">
         <div class="form-group">

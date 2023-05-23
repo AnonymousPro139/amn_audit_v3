@@ -46,8 +46,7 @@ if ($_SESSION['isLoggedIn'] != "true") {
         <div class="container-fluid d-flex align-items-center justify-content-between">
 
             <a href="/user/home" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
-                <!-- <img src="/assets/img/logo.png" alt=""> -->
-                <h1>AMN аудит<span>.</span> </h1>
+                <img src="/assets/img/logo2.png" alt="amnaudit logo" style="width: 6rem; height: 4.3rem; background-color: #0ea2bd; padding: 4px;" class="rounded">
             </a>
 
             <h4>Хэрэглэгч: <?= $_SESSION['phone']; ?><?php if ($_SESSION['role'] == 'admin') echo '(АДМИН)'; ?></h4>
