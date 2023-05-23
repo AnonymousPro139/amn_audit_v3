@@ -18,7 +18,7 @@ if ($_SESSION['role'] != 'admin') {
             <label for="phone">Хэрэглэгч</label>
             <div class="input-group">
 
-                <input type="text" class="form-control" name="phone" placeholder="Утасны дугаар">
+                <input type="text" class="form-control" name="phone" placeholder="Утасны дугаар" required>
             </div>
         </div>
 
@@ -34,7 +34,7 @@ if ($_SESSION['role'] != 'admin') {
             <label for="userpassword">Нууц үг</label>
             <div class="input-group">
 
-                <input type="password" class="form-control" name="password" placeholder="6-с дээш урттай нууц үг оруулаарай">
+                <input type="password" class="form-control" name="password" placeholder="6-с дээш урттай нууц үг оруулаарай" required>
             </div>
         </div>
 

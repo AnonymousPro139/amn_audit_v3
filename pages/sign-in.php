@@ -18,8 +18,8 @@ if (!empty($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] == 'true') {
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/favicon.webp" rel="icon">
+    <link href="assets/img/favicon.webp" rel="apple-touch-icon">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

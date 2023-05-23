@@ -19,8 +19,8 @@ if ($_SESSION['isLoggedIn'] != "true") {
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="/assets/img/favicon.png" rel="icon">
-    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="/assets/img/favicon.webp" rel="icon">
+    <link href="/assets/img/favicon.webp" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +46,7 @@ if ($_SESSION['isLoggedIn'] != "true") {
         <div class="container-fluid d-flex align-items-center justify-content-between">
 
             <a href="/user/home" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
-                <img src="/assets/img/logo2.png" alt="amnaudit logo" style="width: 6rem; height: 4.3rem; background-color: #0ea2bd; padding: 4px;" class="rounded">
+                <img src="/assets/img/_logo.webp" alt="amnaudit logo" style="width: 5rem; height: 4.3rem; background-color: #0ea2bd; padding: 3px;" class="rounded">
             </a>
 
             <h4>Хэрэглэгч: <?= $_SESSION['phone']; ?><?php if ($_SESSION['role'] == 'admin') echo '(АДМИН)'; ?></h4>

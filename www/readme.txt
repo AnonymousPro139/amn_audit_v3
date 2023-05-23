@@ -1,6 +1,5 @@
 - testimonials zurguudig jijigsgeh, file-g jijigsgeh, webp bolgoh
 - hamtran ajillagsdiin png-g webp bolgoh, faq.png-g webp bolgoh
-- favicon icon-uudin orond logo icon oruulah
 - request limit sudlah
 
 - web2sms ?
