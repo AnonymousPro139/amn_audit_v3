@@ -30,6 +30,7 @@ session_start();
   <link href="assets/css/variables_min.css" rel="stylesheet">
 
   <link href="assets/css/main_min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -48,10 +49,10 @@ session_start();
 
           <li><a class="nav-link scrollto" href="index.html#services">Үйлчилгээ</a></li>
           <li><a class="nav-link scrollto" href="index.html#pricing">Үнийн мэдээлэл</a></li>
-          <li><a class="nav-link scrollto" href="index.html#contract">Гэрээ байгуулах</a></li>
-          <li><a class="nav-link scrollto" href="index.html#suggestion">Үнийн санал авах</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contract" onclick="showSection('contract')">Гэрээ байгуулах</a></li>
+          <li><a class="nav-link scrollto" href="index.html#suggestion" onclick="showSection('suggestion')">Үнийн санал авах</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">Бидний тухай</a></li>
-          <li class="dropdown megamenu"><a href="#jobs"><span>Ажилд авъя</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown megamenu"><a href="#jobs" onclick="showSection('jobs')"><span>Ажилд авъя</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
 
             <ul>
               <li>
@@ -65,7 +66,7 @@ session_start();
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav>
 
-      <a class="btn-getstarted scrollto" href="/sign-in">Нэвтрэх</a>
+      <!-- <a class="btn-getstarted scrollto" href="/sign-in">Нэвтрэх</a> -->
 
     </div>
   </header>
@@ -600,7 +601,7 @@ session_start();
     </section>
 
     <!-- ======= Нээлттэй ажлын байр ======= -->
-    <section id="jobs" class="features">
+    <section id="jobs" class="features" hidden="true">
       <div class="section-header">
         <h2>Нээлттэй ажлын байр</h2>
       </div>
@@ -867,7 +868,7 @@ session_start();
     </section>
 
     <!-- ======= Гэрээ байгуулах ======= -->
-    <section id="contract" class="contact">
+    <section id="contract" class="contact" hidden="true">
       <div class="container">
         <div class="section-header">
             <h2>Гэрээ байгуулах</h2>
@@ -876,38 +877,38 @@ session_start();
           <form action="/contract/add-geree" method="POST" role="form" >
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="company_registr" class="form-control" placeholder="Байгууллагын регистр" required value="ab123123">
+                  <input type="text" name="company_registr" class="form-control" placeholder="Байгууллагын регистр" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="director_name" class="form-control" placeholder="Захирлын овог нэр" required value="Bat Dulamtseren">
+                  <input type="text" name="director_name" class="form-control" placeholder="Захирлын овог нэр" required>
                 </div>
               </div>
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="company_name" class="form-control"placeholder="Байгууллагын нэр" required value="ABCDE LLC">
+                  <input type="text" name="company_name" class="form-control"placeholder="Байгууллагын нэр" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="number" name="director_phone" class="form-control" placeholder="Захирлын холбогдох утас" required value="88959522">
+                  <input type="number" name="director_phone" class="form-control" placeholder="Захирлын холбогдох утас" required>
                 </div>
               </div>
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <input type="email" name="email"  class="form-control" placeholder="Email хаяг" required value="test_company@gmail.com"> 
+                  <input type="email" name="email"  class="form-control" placeholder="Email хаяг" required> 
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="nybo_name" class="form-control" placeholder="Нягтлан бодогчийн овог нэр" required value="Gerelmaa Enkhtuya">
+                  <input type="text" name="nybo_name" class="form-control" placeholder="Нягтлан бодогчийн овог нэр" required>
                 </div>
               </div>
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="address" class="form-control" placeholder="Хаяг, байршил" value="Baynzurh, 17-r horoo, 35-12-15 toot">
+                  <input type="text" name="address" class="form-control" placeholder="Хаяг, байршил">
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="number" name="nybo_phone" class="form-control" placeholder="Нягтлан бодогчийн холбогдох утас" value="99663322" required>
+                  <input type="number" name="nybo_phone" class="form-control" placeholder="Нягтлан бодогчийн холбогдох утас" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="3" placeholder="Ямар үйлчилгээ авах талаараа бичээрэй" required>тайлан гаргуулах, аудит хийлгэх хүсэлтэй байна, Яаралтай холбогдоорой, баярлалаа</textarea>
+                <textarea class="form-control" name="message" rows="3" placeholder="Ямар үйлчилгээ авах талаараа бичээрэй" required></textarea>
               </div>
       
               <div class="text-center mt-3"><button type="submit" class="btn rounded" style="color: white; background-color: #0ea2bd;">Илгээх</button></div>
@@ -916,7 +917,7 @@ session_start();
       </div>
     </section>
     <!-- ======= Үнийн санал авах ======= -->
-    <section id="suggestion" class="contact">
+    <section id="suggestion" class="contact" hidden="true">
       <div class="container">
         <div class="section-header">
             <h2>Үнийн санал авах</h2>
@@ -928,7 +929,7 @@ session_start();
                   <input type="text" name="company_registr" class="form-control" placeholder="Байгууллагын регистр" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" name="brand" class="form-control" placeholder="Үйл ажиллагааны чиглэл">
+                  <input type="text" name="brand" class="form-control" placeholder="Үйл ажиллагааны чиглэл" required>
                 </div>
               </div>
               <div class="row mt-3">
@@ -1060,7 +1061,9 @@ session_start();
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  
+  <script src="assets/js/admin.js"></script>
+  
 </body>
 
 </html>

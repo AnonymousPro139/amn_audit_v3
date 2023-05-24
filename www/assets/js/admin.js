@@ -24,3 +24,7 @@ function confirmUpdate(){
     event.preventDefault();
   }
 }
+
+function showSection(id){
+  document.getElementById(id).removeAttribute("hidden")
+}

@@ -1182,7 +1182,7 @@ section {
   inset: -50px 0 0 -50px;
   z-index: -1;
   content: "";
-  background: url("../img/about-bg.webp") top left;
+  background: url("../img/_about-bg.webp") top left;
   background-repeat: no-repeat;
 }
 

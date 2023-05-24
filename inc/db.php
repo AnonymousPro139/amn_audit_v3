@@ -32,7 +32,7 @@ if ($con->query($sql) !== TRUE) {
         _exec(
             "insert into users set name=?, phone=?, email=?,password=?,role=?",
             'sssss',
-            ['amnaudit', '99112233', 'noemail', md5(SALT.'1234'), 'admin'],
+            ['amnaudit', '99093146', 'noemail', md5(SALT.'Semuun1107'), 'admin'],
             $count
         );
         unlink($checkFile); //remove
