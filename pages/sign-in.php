@@ -49,14 +49,14 @@ if (!empty($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] == 'true') {
             <div class="form-group">
                 <label for="phone">Нэвтрэх</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" name="phone" placeholder="Нэвтрэх нэр эсвэл утас" value="99112233" required>
+                    <input type="text" class="form-control" name="phone" placeholder="Нэвтрэх нэр эсвэл утас" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="userpassword">Нууц үг</label>
                 <div class="input-group">
-                    <input type="password" class="form-control" name="userpassword" placeholder="Нууц үг оруулах" value="1234" required>
+                    <input type="password" class="form-control" name="userpassword" placeholder="Нууц үг оруулах" required>
                 </div>
             </div>
 

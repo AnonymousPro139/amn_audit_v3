@@ -87,6 +87,7 @@ session_start();
     </div>
   </div>
   <?php unset($_SESSION['errors']); endif;?>
+
   <!-- Home -->
   <section id="hero-fullscreen" class="hero-fullscreen d-flex align-items-center">
     <div class="container d-flex flex-column align-items-center position-relative" data-aos="zoom-out">
@@ -98,7 +99,7 @@ session_start();
       <h2><span>Мэргэжлийн хамт олон</span></h2>
       <h2 style="margin-bottom: 2rem;"><span>Чанартай үйлчилгээ</span></h2>
       
-      <p style="text-align: center;">Бид <strong>аудит</strong> баталгаажуулалт, <strong>нягтлан бодох</strong> бүртгэлийн зөвлөх, тайлан гаргах, <strong>программ нэвтрүүлэлтийн</strong> үйлчилгээг мэргэжлийн өндөр түвшинд үзүүлж байна.</p>
+      <p style="text-align: center;">Бид аудит баталгаажуулалт, нягтлан бодох бүртгэлийн зөвлөх, тайлан гаргах, программ нэвтрүүлэлтийн<br/> үйлчилгээг мэргэжлийн өндөр түвшинд үзүүлж байна.</p>
     </div>
   </section>
 
@@ -109,14 +110,16 @@ session_start();
 
         <div class="section-header">
           <h2>Бидний тухай</h2>
-          <p>Аудитын үйл ажиллагаа эрхлэх <strong>тусгай зөвшөөрөлтэй</strong>, ММНБИ-ын <strong>гишүүн</strong> байгууллага юм.</p>
+          <p  style="font-size: 18px;">Аудитын үйл ажиллагаа эрхлэх тусгай зөвшөөрөлтэй, ММНБИ-ын гишүүн байгууллага юм.</p>
         </div>
 
         <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-5">
             <div class="about-img">
-              <img src="assets/img/about.webp" class="img-fluid" alt="about amn audit">
+              <!-- <img src="assets/img/about.webp" class="img-fluid" alt="about amn audit" style="height: 450px;"> -->
+              <img src="assets/img/_logo.webp" class="img-fluid rounded" alt="about amn audit" style="background-color: #0ea2bd; height: auto; width: auto; padding: 100px;">
+
             </div>
           </div>
 
@@ -234,7 +237,7 @@ session_start();
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-activity icon"></i></div>
               <h4><a href="" class="stretched-link">Туршлагатай</a></h4>
-              <p>Бид энэ салбартаа мэргэжлийн бөгөөд 2015 оноос хойш үйл ажиллагаагаа явуулж байна.</p>
+              <p style="text-align: justify;">Бид энэ салбартаа мэргэжлийн бөгөөд 2015 оноос хойш тасралтгүй үйл ажиллагаагаа явуулж байна.</p>
             </div>
           </div>
 
@@ -242,7 +245,7 @@ session_start();
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
               <h4><a href="" class="stretched-link">Хариуцлагатай</a></h4>
-              <p>Бид гэрээгээр хүлээсэн үүргийн хүрээнд амлалтаа бүрэн биелүүлж харилцагчдынхаа мэдээ мэдээллийн нууцыг чанд хадгалан ажилладаг.</p>
+              <p style="text-align: justify;">Бид гэрээгээр хүлээсэн үүргийн хүрээнд амлалтаа бүрэн биелүүлж харилцагчдынхаа мэдээ мэдээллийн нууцыг чанд хадгалан ажилладаг.</p>
             </div>
           </div>
 
@@ -250,7 +253,7 @@ session_start();
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
               <h4><a href="" class="stretched-link">Уян хатан</a></h4>
-              <p>Хамтран ажиллах хүрээнд бүхий л зүйлд уян хатан ханддаг.</p>
+              <p style="text-align: justify;">Хамтран ажиллах хүрээнд бүхий л зүйлд уян хатан ханддаг.</p>
             </div>
           </div>
 
@@ -258,7 +261,7 @@ session_start();
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-broadcast icon"></i></div>
               <h4><a href="" class="stretched-link">Тогтвортой</a></h4>
-              <p>Олон жилийн турш таны үнэнч хамтрагч байна.</p>
+              <p style="text-align: justify;">Олон жилийн турш таны үнэнч хамтрагч байна.</p>
             </div>
           </div>
 
@@ -273,12 +276,12 @@ session_start();
 
         <div class="section-header">
           <h2>Үйлчилгээ</h2>
-          <p>Манай компани дараах төрлийн үйлчилгээг үзүүлж байна.</p>
+          <p  style="font-size: 18px;">Манай компани дараах төрлийн үйлчилгээг үзүүлж байна.</p>
         </div>
 
         <div class="row gy-5 mb-2">
 
-          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="service-item">
               <div class="img">
                 <img src="assets/img/_services1.webp" class="img-fluid" alt="">
@@ -299,7 +302,8 @@ session_start();
               </div>
             </div>
           </div>
-          <div class="col-xl-6  col-md-6" data-aos="zoom-in" data-aos-delay="250">
+
+          <div class="col-xl-6  col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="service-item">
               <div class="img">
                 <img src="assets/img/_service2.webp" class="img-fluid" alt="">
@@ -311,7 +315,7 @@ session_start();
                 <a href="#services" class="stretched-link">
                   <h3>Dayansoft ERP программ нэвтрүүлэх үйлчилгээ</h3>
                 </a>
-                <div style="font-size: 16px;">Нягтлан бодох бүртгэлийн Даянсофт ERP программ нэвтрүүлэх тал дээр Даянсофт ХХК-тай хамтран ажиллаж байна.</div>
+                <div style="font-size: 16px;">Нягтлан бодох бүртгэлийн Даянсофт ERP программ нэвтрүүлэх тал дээр Даянсофт ХХК-тай хамтран ажиллаж байна.<br><br></div>
                 <a href="#" class="stretched-link"></a>
               </div>
             </div>
@@ -330,12 +334,12 @@ session_start();
                   <i class="bi bi-broadcast"></i>
                 </div>
                 <a href="#services" class="stretched-link">
-                  <h3>Нягтлан бодох бүртгэлийн зөвлөх үйлчилгээ /онлайн, биечлэн/</h3>
+                  <h3>Нягтлан бодох бүртгэлийн зөвлөх үйлчилгээ <br> /онлайн, биечлэн/</h3>
                 </a>
                 <ul>
                   <li style="text-align: left;">Үйл ажиллагааны онцлог чиглэлд тохирсон данс, бүртгэлээ зохион байгуулах талаар </li>
                   <li style="text-align: left;">Нягтлан бодох бүртгэлийн тулгамдсан асуудлуудаар </li>
-                  <li style="text-align: left;">Ерөнхий нягтлан бодогчийн үйлчилгээ үзүүлж санхүүгийн бүртгэлийг хянаж, зөвлөгөө өгч хамтран ажиллана</li>
+                  <li style="text-align: left;">Ерөнхий нягтлан бодогчийн үйлчилгээ үзүүлж санхүүгийн бүртгэлийг хянаж, зөвлөгөө өгч хамтран ажиллана <br><br></li>
                 </ul>
               </div>
             </div>
@@ -346,7 +350,7 @@ session_start();
               <div class="img">
                 <img src="assets/img/_services-5.webp" class="img-fluid" alt="">
               </div>
-              <div class="details position-relative">
+              <div class="details position-relative" >
                 <div class="icon">
                   <i class="bi bi-chat-square-text"></i>
                 </div>
@@ -372,7 +376,7 @@ session_start();
 
         <div class="section-header">
           <h2>Үнийн мэдээлэл</h2>
-          <p>Үнийн санал авах цэсээр мэдээллээ ирүүлээрэй</p>
+          <p  style="font-size: 18px;">Үнийн санал авах цэсээр мэдээллээ ирүүлээрэй</p>
         </div>
 
         <div class="row gy-4">
@@ -381,7 +385,9 @@ session_start();
             <div class="pricing-item featured">
 
               <div class="pricing-header">
-                <h3>Аудит, баталгаажуулалтын үйлчилгээ</h3>
+                <!-- <h5>Аудит, баталгаажуулалтын үйлчилгээ</h5> -->
+                <div style="font-size: 24px; font-weight: bolder; color: white; padding: 15px;">Аудит, баталгаажуулалтын үйлчилгээ</div>
+
               </div>
 
               <ul>
@@ -396,7 +402,8 @@ session_start();
             <div class="pricing-item">
 
               <div class="pricing-header">
-                <h3>НББ-ийн зөвлөх үйлчилгээ /онлайн, биечлэн/</h3>
+                <!-- <h3>НББ-ийн зөвлөх үйлчилгээ /онлайн, биечлэн/</h3> -->
+                <div style="font-size: 24px; font-weight: bolder; color: white; padding: 15px;">НББ-ийн зөвлөх үйлчилгээ /онлайн, биечлэн/</div>
               </div>
 
               <ul>
@@ -426,7 +433,7 @@ session_start();
 
         <div class="section-header" style="margin-top: 2rem;">
           <h2>Dayansoft ERP программ нэвтрүүлэлтийн үнийн мэдээлэл</h2>
-          <p>Дараах 3 төрлийн үйлчилгээ байна</p>
+          <p style="font-size: 18px;">Дараах 3 төрлийн үйлчилгээ байна</p>
         </div>
         
         <div class="row gy-4">
@@ -434,7 +441,7 @@ session_start();
             <div class="pricing-item featured">
 
               <div class="pricing-header">
-                <h5 style="color: white; ">Dayansoft ERP программын сургалтын үйлчилгээ</h5>
+                <h5 style="font-size: 24px; font-weight: bolder; color: white; padding: 2px;">Dayansoft ERP программын сургалтын үйлчилгээ</h5>
               </div>
 
               <ul>
@@ -453,11 +460,11 @@ session_start();
             <div class="pricing-item">
 
               <div class="pricing-header">
-                <h5 style="color: white; text-align: center;">Dayansoft ERP программын сургалт болон НББ-ийн зөвлөх үйлчилгээ</h5>
+                <h5 style="font-size: 22px; font-weight: bolder; color: white; padding: 2px;">Dayansoft ERP программын сургалт болон НББ-ийн зөвлөх үйлчилгээ</h5>
               </div>
 
               <ul>
-                <li> <span>Онлайн, биечлэн сургалт болон НББ-ийн зөвлөх үйлчилгээ</span></li>
+                <li> <span>Программ болон НББ-ийн зөвлөх үйлчилгээ</span></li>
                 <li><i class="bi bi-dot"></i> <span>8 цаг - 760k</span></li>
                 <li><i class="bi bi-dot"></i> <span>16 цаг - 1280k</spa>
                 </li>
@@ -473,11 +480,11 @@ session_start();
             <div class="pricing-item featured">
 
               <div class="pricing-header">
-                <h5 style="color: white;">Dayansoft ERP программын сургалт, НББ-ийн зөвлөх, санхүү татварын тайлан гаргах үйлчилгээ</h5>
+                <h5 style="font-size: 20px; font-weight: bolder; color: white; padding: 2px;">Dayansoft ERP программын сургалт, НББ-ийн зөвлөх, санхүү татварын тайлан гаргах үйлчилгээ</h5>
               </div>
 
               <ul>
-                <li> <span>- Программын цогц сургалт /+дадлага/,</span></li>
+                <li> <span>- Программын цогц сургалт</span></li>
                 <li></i> <span>- Нягтлан бодох бүртгэлийн сургалт <br>/ 1 сарын гүйлгээгээр/</span></li>
                 <li></i> <span>- Санхүү, татварын тайлан гаргах сургалт</span></li>
                 <li><i class="bi bi-dot"></i> <span>56 цаг - 2800k</spa>
@@ -541,7 +548,7 @@ session_start();
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      “Эй Эм Эн Аудит” ХХК нь цаг хугацаандаа хяналт шалгалт хийдэг, өндөр гүйцэтгэлтэй, хариуцлагатай, зарчимч, нягт нямбай, тогтвортой үйл ажиллагаа явуулж ирсэн манай байнгын санхүүгийн зөвлөгч маань байж ирсэн найдвартай түнш байгууллага юм.
+                      “Эй Эм Эн Аудит” ХХК нь манай байгууллагын санхүүгийн зөвлөгч, найдвартай түнш байгууллага юм.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -556,7 +563,7 @@ session_start();
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      ... тус компанийн хамт олон маш чадварлаг, мэргэжлийн байж хариуцсан ажилдаа зарчимч, шударга ханддаг бөгөөд түншлэлийн харилцааг эрхэмлэдэг найрсаг хамт олон.
+                      2014 онд үүсгэн байгуулагдсанаасаа хойш, хариуцсан ажилдаа зарчимч, шударга ханддаг хамт олноос НББ-ийн бүх үйлчилгээг авч байгаадаа сэтгэл хангалуун явдаг.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -565,14 +572,14 @@ session_start();
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <img src="assets/img/testimonials/mzul.webp" class="testimonial-img" alt="">
-                    <h3>Мөнхзул</h3>
+                    <h3>Б.Мөнхзул</h3>
                     <h4>Би Си Эйч констракшн ХХК-ийн нягтлан бодогч</h4>
                     <div class="stars">
                       <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      ... аудит маань мэдлэг ур чадварын хувьд зүгээр л хамгийн шилдэг нь байж чаддаг. Ажлын амжилт хүсье 
+                      Мэдлэг ур чадварын хувьд хамгийн шилдэг нь байж чаддаг  “Эй Эм Эн аудит” ХХК-ийн хамт олонд ажлын өндөр амжилт хүсье.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -581,14 +588,14 @@ session_start();
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <img src="assets/img/testimonials/ubaigal.webp" class="testimonial-img" alt="">
-                    <h3>Уранбайгаль</h3>
+                    <h3>Б.Уранбайгал</h3>
                     <h4>Санжэм ХХК-ийн санхүү хариуцсан захирал</h4>
                     <div class="stars">
                       <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      Мэргэжлийн ёс зүйг дээдэлдэг, чадварлаг туршлагатай ажилчдаар аудит, баталгаажуулалт хийлгэж хамтран ажиллахад үнэхээр таатай байдаг.
+                      Мэргэжлийн ёс зүйг дээдэлдэг, чадварлаг туршлагатай ажилчидтай хамтран ажиллахад үнэхээр таатай байдаг.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -636,14 +643,14 @@ session_start();
           <div class="tab-pane active show" id="job1">
             <div class="row gy-4">
               <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-                <h3>Аудитор таныг ажилд урьж байна</h3>
+                <h4>Аудитор таныг ажилд урьж байна</h4>
                 <p class="fst-italic" style="margin-top: 20px; color: black; font-weight: bold;">
                   Гүйцэтгэх үүрэг
                 </p>
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Аудитын төлөвлөгөө, хөтөлбөрийн дагуу бүртгэлийн бичилтүүд, тайлан мэдээ, мэдээллийг баримт бүрдүүлэлттэй харьцуулж, хөрөнгө, өр төлбөр, өмчийг баталгаажуулах, үйлчлүүлэгчийн санхүүгийн тайлан нь холбогдох хууль, СТОУС-ын дагуу үнэн зөв, бодитой илэрхийлэгдсэн эсэхэд аудит хийнэ</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Аудитын шалгалт болон дүгнэлтийн дагуу баримт бүрдүүлэн, аудитын ажлын тайланг бэлтгэж урьдчилсан дүгнэлтийг танилцуулах, аудит хийлгэж байгаа этгээдтэй зөвшилцөх, үйл ажиллагааны мэдээлэл ба хандлагуудыг цуглуулж, шинжилж, нэгтгэн аудитын эцсийн тайланг бэлтгэх</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Одоо мөрдөгдөж байгаа болон шинээр гарч байгаа хууль тогтоомж, стандартыг судалж, шаардлагуудад нийцүүлж ажиллахыг шаардах; шаардлагатай үйл ажиллагаануудад удирдлагад зөвлөгөө өгөх</li>
+                  <li style="text-align: justify;"><i class="bi bi-check-circle-fill"></i> Аудитын төлөвлөгөө, хөтөлбөрийн дагуу бүртгэлийн бичилтүүд, тайлан мэдээ, мэдээллийг баримт бүрдүүлэлттэй харьцуулж, хөрөнгө, өр төлбөр, өмчийг баталгаажуулах, үйлчлүүлэгчийн санхүүгийн тайлан нь холбогдох хууль, СТОУС-ын дагуу үнэн зөв, бодитой илэрхийлэгдсэн эсэхэд аудит хийнэ</li>
+                  <li style="text-align: justify;"><i class="bi bi-check-circle-fill"></i> Аудитын шалгалт болон дүгнэлтийн дагуу баримт бүрдүүлэн, аудитын ажлын тайланг бэлтгэж урьдчилсан дүгнэлтийг танилцуулах, аудит хийлгэж байгаа этгээдтэй зөвшилцөх, үйл ажиллагааны мэдээлэл ба хандлагуудыг цуглуулж, шинжилж, нэгтгэн аудитын эцсийн тайланг бэлтгэх</li>
+                  <li style="text-align: justify;"><i class="bi bi-check-circle-fill"></i> Одоо мөрдөгдөж байгаа болон шинээр гарч байгаа хууль тогтоомж, стандартыг судалж, шаардлагуудад нийцүүлж ажиллахыг шаардах; шаардлагатай үйл ажиллагаануудад удирдлагад зөвлөгөө өгөх</li>
                   <li><i class="bi bi-check-circle-fill"></i>	Аудитын ажлын баримтыг бүрдүүлж үдэхэд бэлтгэн ахлах аудиторт хүлээлгэн өгөх</li>                  
                   <li><i class="bi bi-check-circle-fill"></i>	Аудитын хөтөлбөр болон асуулгуудыг шинэчилж, удирдлагад шинэ бодлого журам санал болгох</li>
                 </ul>
@@ -652,7 +659,7 @@ session_start();
                   Тавигдах шаардлага
                   </p>
                   <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Аудиторын батламжтай, мэргэжлээрээ 2-с дээш жил ажилласан, Аудитын стандарт, хуулийн зохицуулалтуудын дагуу бичиг баримт боловсруулах чадвартай байх </li>
+                    <li  style="text-align: justify;"><i class="bi bi-check-circle-fill"></i> Аудиторын батламжтай, мэргэжлээрээ 2-с дээш жил ажилласан, Аудитын стандарт, хуулийн зохицуулалтуудын дагуу бичиг баримт боловсруулах чадвартай байх </li>
                     <li><i class="bi bi-check-circle-fill"></i> Санхүүгийн программ хангамж, хэрэглээний оффис программуудыг чадварлаг эзэмшсэн байх </li>
                     <li><i class="bi bi-check-circle-fill"></i> Мэргэжлийн ёс зүйтэй, харилцааны соёлтой, нягт нямбай, ажлыг бүрэн гүйцэд хийдэг байх</li>
                     
@@ -667,12 +674,12 @@ session_start();
           <div class="tab-pane" id="job2">
             <div class="row gy-4">
               <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-                <h3>Аудиторын туслах таныг ажилд урьж байна</h3>
+                <h4>Аудиторын туслах таныг ажилд урьж байна</h4>
                 <p class="fst-italic" style="margin-top: 20px; color: black; font-weight: bold;">
                   Гүйцэтгэх үүрэг
                 </p>
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Аудитын багт оролцож аудиторын удирдлага дор аудитын баримт бүрдүүлэх, түүвэр тооцоолол хийх, ажлын төлөвлөгөөний дагуу горим сорилыг хэрэгжүүлэх</li>
+                  <li  style="text-align: justify;"><i class="bi bi-check-circle-fill"></i> Аудитын багт оролцож аудиторын удирдлага дор аудитын баримт бүрдүүлэх, түүвэр тооцоолол хийх, ажлын төлөвлөгөөний дагуу горим сорилыг хэрэгжүүлэх</li>
 
                 </ul>
 
@@ -680,7 +687,7 @@ session_start();
                   Тавигдах шаардлага
                   </p>
                   <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Санхүү, нягтлан бодох бүртгэлийн чиглэлээр бакалавр болон түүнээс дээш зэрэгтэй байх</li>
+                    <li  style="text-align: justify;"><i class="bi bi-check-circle-fill"></i> Санхүү, нягтлан бодох бүртгэлийн чиглэлээр бакалавр болон түүнээс дээш зэрэгтэй байх</li>
                     <li><i class="bi bi-check-circle-fill"></i> Бие дааж тайлан баланс гаргасан туршлагатай, чадвартай байх</li>
                     <li><i class="bi bi-check-circle-fill"></i> Санхүүгийн программ хангамж, хэрэглээний оффис программуудыг чадварлаг эзэмшсэн байх </li>
                     <li><i class="bi bi-check-circle-fill"></i> Мэргэжлийн ёс зүйтэй, харилцааны соёлтой, нягт нямбай, ажлыг бүрэн гүйцэд хийдэг байх</li>
@@ -697,12 +704,12 @@ session_start();
           <div class="tab-pane" id="job3">
             <div class="row gy-4">
               <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-                <h3>Нягтлан бодогч таныг ажилд урьж байна</h3>
+                <h4>Нягтлан бодогч таныг ажилд урьж байна</h4>
                 <p class="fst-italic" style="margin-top: 20px; color: black; font-weight: bold;">
                   Гүйцэтгэх үүрэг
                 </p>
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Үйлчлүүлэгч байгууллагын санхүүгийн баримт материалыг хүлээн авч ажил, гүйлгээ мэдээллийг программд шивж оруулах</li>
+                  <li style="text-align: justify;"><i class="bi bi-check-circle-fill"></i> Үйлчлүүлэгч байгууллагын санхүүгийн баримт материалыг хүлээн авч ажил, гүйлгээ мэдээллийг программд шивж оруулах</li>
                   <li><i class="bi bi-check-circle-fill"></i> Байгууллагын санхүүгийн тайлан балансыг гаргаж, холбогдох байгууллагад илгээх</li>
                   <li><i class="bi bi-check-circle-fill"></i> Цалингийн тооцоолол хийж, нийгмийн даатгалын тайлан гаргаж илгээх</li>
                   <li><i class="bi bi-check-circle-fill"></i> Улирал тутам холбогдох татварын тайланг шивэлт хийж баталгаажуулах ажлыг хариуцах</li>
@@ -758,9 +765,7 @@ session_start();
                 </h3>
                 <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                   <div class="accordion-body">
-                    <ul>
-                      <li>"Аудитын тухай" хуулийн 10-р зүйлд заасан байгууллагууд заавал аудит хийлгэнэ.</li>
-                    </ul>
+                    "Аудитын тухай" хуулийн 10-р зүйлд заасан байгууллагууд заавал аудит хийлгэнэ.
                   </div>
                 </div>
               </div>
@@ -976,24 +981,21 @@ session_start();
             <div class="footer-info">
               <h4>Эй Эм Эн аудит ХХК</h4>
               <p>
-                <strong>Ажлын цаг:</strong><br>
-                <h4>
-                10:00 - 19:00<br><br>
+                <strong>Ажлын цаг: 10:00 - 19:00</strong><br>
                 Бямба, Нямд амарна.
-              </h4>
+                <br>
+                <br>
 
                 <strong>Хаяг:</strong><br>
-                <h4>
-                Улаанбаатар хот,<br>
-                Сүхбаатар дүүрэг, 1-р хороо, Энхтайвны өргөн чөлөө - 23, UBH center- 9 давхар 913Б<br><br>
+                УБ, СБД, 1-р хороо, Энхтайвны өргөн <br>чөлөө - 23, UBH center- 9 давхар 913Б<br>
                 <a target='_blank' href="https://www.google.com/maps/place/UBH+Center/@47.917375,106.9239795,17.25z/data=!4m6!3m5!1s0x5d9692476541435f:0x3d0ea636e74f9173!8m2!3d47.9174357!4d106.924008!16s%2Fg%2F11bycfgpp7">
                   Google map дээр хаяг харах
                 </a>
-              </h4>
-            
+                <br>
+                <br>
                 
-                <strong>Утас:</strong> <h4>7709-8768,<br> 9909-3146,<br> 9909-8768 </h4><br>
-                <strong>Email:</strong> auditamn@gmail.com<br>
+                <strong>Утас:</strong> <h4>7709-8768, 9909-3146, 9909-8768</h4>
+                <strong>Email: auditamn@gmail.com</strong><br>
               </p>
             </div>
           </div>
@@ -1040,7 +1042,7 @@ session_start();
         </div>
 
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.facebook.com/amn.audit.9/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
         </div>
 
       </div>
