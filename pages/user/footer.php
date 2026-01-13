@@ -9,7 +9,7 @@
           &copy; <strong><span>Amn аудит ХХК</span></strong>. Бүх эрх хуулиар хамгаалагдсан.
         </div>
         <div class="credits">
-          coded by <a href="#">AnonymousPro</a>
+          coded by <a href="#">Coder</a>
         </div>
       </div>
 
