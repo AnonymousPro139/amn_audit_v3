@@ -3,10 +3,14 @@ define("ROOT", dirname(dirname(__FILE__)));
 require ROOT . '/inc/conf.php';
 require ROOT . '/inc/db.php';
 
-$page = @$_SERVER['REDIRECT_URL'];
+// $page = @$_SERVER['REDIRECT_URL'];
 
+$page = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$page = rtrim($page, '/');
 
-if (empty($page)) {
+// if (empty($page)) {
+
+if ($page === '') {
     require ROOT . '/pages/index.html';
 } else {
     $script = ROOT . '/pages' . $page . '.php';
