@@ -1,5 +1,4 @@
-- testimonials zurguudig jijigsgeh, file-g jijigsgeh, webp bolgoh
-- hamtran ajillagsdiin png-g webp bolgoh, faq.png-g webp bolgoh
+
 - request limit sudlah
 
 - web2sms ?
@@ -7,4 +6,10 @@
 
  ------------------------------------------
 - Create /pages/check.php 
-- config the phone and password in db.php 
+- config the name, phone and password in db.php 
+
+-------------- Server deer
+1.MySQL db uusgeh
+2. db_user uusgeh
+3. db-dee tuhain user-n permission olgoh
+4. cpanel-n file drectory deer public_html (or www) dotor www folder-oo huulah, busdiig n gadna tald n huulah
